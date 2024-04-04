@@ -16,3 +16,4 @@ Intended for my server, and to those who want to try it
 <br>
 <br>
 My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
+Hehe I'm new to this
