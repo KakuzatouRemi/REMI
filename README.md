@@ -12,3 +12,6 @@ Intended for my server, and to those who want to try it
     + Right click to shoot
     + Uses Normal/Packed/Blue Ice as ammo
     + Range 30~40 blocks
+ 
+
+My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
