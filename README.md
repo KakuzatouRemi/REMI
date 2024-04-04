@@ -12,7 +12,10 @@ Intended for my server, and to those who want to try it
     + Right click to shoot
     + Uses Normal/Packed/Blue Ice as ammo
     + Range 30~40 blocks
- 
+
+<br>
+Known issues: Items are placable, doesn't affect much
+<br>
 <br>
 <br>
 My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
