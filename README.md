@@ -13,11 +13,13 @@ Intended for my server, and to those who want to try it
     + Uses Normal/Packed/Blue Ice as ammo
 + Icicle Staff
     + Right click to shoot
-    + Needs at least one Ice in inventory 
+    + Needs at least one Ice in inventory
+    + 1.2x faster projectile
     + Range 30~40 blocks
 + Glacial Staff
     + Right click to shoot
     + No need for Ice
+    + 1.4x faster projectile
     + Splash Damage / AOE, 3 block radius around point of impact
     + Range 30~40 blocks
 <br>
