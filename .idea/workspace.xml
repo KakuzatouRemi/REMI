@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="build jar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/IcicleStaffListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/IceBlasterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/IceBlasterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.13-Alpha.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Added IcicleStaff">
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/IceBlasterListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/IceBlasterListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/IceBlasterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/IceBlasterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +38,12 @@
     &quot;assignee&quot;: &quot;KakuzatouRemi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/KakuzatouRemi/REMI.git&quot;,
-    &quot;accountId&quot;: &quot;45f64caa-ed3d-4d16-b0ab-a434ae39a7ee&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KakuzatouRemi/REMI.git",
+    "accountId": "075f9c96-219d-471a-9cee-34a85529c12e"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" root0="SKIP_INSPECTION" />
   </component>
@@ -141,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712245059312</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added IcicleStaff">
+      <option name="closed" value="true" />
+      <created>1712502406327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712502406327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +165,7 @@
     <MESSAGE value="build" />
     <MESSAGE value="changed from java 17 to java 18" />
     <MESSAGE value="build jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="build jar" />
+    <MESSAGE value="Added IcicleStaff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added IcicleStaff" />
   </component>
 </project>
