@@ -260,6 +260,28 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
+        SlimefunItemStack ConcentratedExplosives = new SlimefunItemStack("CONCENTRATED_EXPLOSIVES", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQ3YmRmMzJmNDI3YjhkZjBhNGNjMWVlYWMzNGQ5NTc1NjAzNWQ0YjM1MWU3NWZiMTE4NzYxZWYwMjA0YzQwZiJ9fX0=", "&6Concentrated Explosives", "&7No smoking!");
+        ItemStack[] ConcentratedExplosivesRecipe = {
+                new ItemStack(Material.TNT), new ItemStack(Material.END_CRYSTAL), new ItemStack(Material.TNT),
+                new ItemStack(Material.FIRE_CHARGE), new ItemStack(Material.RESPAWN_ANCHOR), new ItemStack(Material.FIRE_CHARGE),
+                new ItemStack(Material.TNT), new ItemStack(Material.END_CRYSTAL), new ItemStack(Material.TNT)
+        };
+        SlimefunItem ConcentratedExplosivesItem = new SlimefunItem(RU_MATERIALS, ConcentratedExplosives, RecipeType.ENHANCED_CRAFTING_TABLE, ConcentratedExplosivesRecipe);
+        ConcentratedExplosivesItem.register(this);
+
+        //HEHE//
+
+        SlimefunItemStack APHE = new SlimefunItemStack("APHE", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTRmOWRkMzkwNzAxODY0MWJkYjEwNWI5NjQ3YzA4MjI3OTYyZjEwNjUwMmE2ODI5YWRkNGI5MDhmNzQyYTgzNyJ9fX0=", "&6APHE", "&7Armor-Piercing High Explosive");
+        ItemStack[] APHERecipe = {
+                new ItemStack(SlimefunItems.STEEL_INGOT), new ItemStack(SlimefunItems.STEEL_INGOT), new ItemStack(SlimefunItems.STEEL_INGOT),
+                new ItemStack(SlimefunItems.STEEL_INGOT), ConcentratedExplosives, new ItemStack(SlimefunItems.STEEL_INGOT),
+                new ItemStack(SlimefunItems.STEEL_INGOT), new ItemStack(SlimefunItems.STEEL_INGOT), new ItemStack(SlimefunItems.STEEL_INGOT)
+        };
+        SlimefunItem APHEItem = new SlimefunItem(RU_MATERIALS, APHE, RecipeType.ENHANCED_CRAFTING_TABLE, APHERecipe);
+        APHEItem.register(this);
+
+        //HEHE//
+
         SlimefunItemStack PowerCore = new SlimefunItemStack("POWER_CORE",
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIxMGVkOTQwODBhMDc1NDZhMjQ1ZWM4MzdjZmM1ODE0Yzc2NThjN2VmMzM3YmUwMzVhMTFiMmUxZTAzYmExNiJ9fX0=",
                 "&8Power Core", "&cBetter than lithium-ion batteries");
@@ -281,7 +303,8 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem teleportationCoreItem = new SlimefunItem(RU_MATERIALS, TeleportationCore, RecipeType.ENHANCED_CRAFTING_TABLE, teleportationCoreRecipe);
         teleportationCoreItem.register(this);
 
-        //HEHE
+        //HEHE//
+
         SlimefunItemStack IceCore = new SlimefunItemStack("ICE_CORE", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTFiNWY2OWUxOTAxMDE5NGExOWNhZjE4NDM3YzdjYTcxMjIxZTQxM2FhMDg5ZWFmYTQ3YjliZGQ5Zjk5ZGQ4NSJ9fX0=", "&bIce Core", "&bDon't mistake for a portable AC");
         ItemStack[] IceCoreRecipe = new ItemStack[]{
                 ConsolidatedIce, ConsolidatedIce, ConsolidatedIce,
@@ -290,6 +313,18 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         };
         SlimefunItem IceCoreItem = new SlimefunItem(RU_MATERIALS, IceCore, RecipeType.ENHANCED_CRAFTING_TABLE, IceCoreRecipe);
         IceCoreItem.register(this);
+
+        //HEHE//
+
+        SlimefunItemStack ExplosiveCore = new SlimefunItemStack("EXPLOSIVE_CORE", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJiMjhiYjBiZjFhZDIxN2QyYTgxMTkxZWZmY2M2OWZlMTc0NzE0YTQzMmZkNzFmYTYwYWE1MGYzNzEyYjk3In19fQ==", "&cExplosive Core", "&cDon't stick a screwdriver!");
+        ItemStack[] ExplosiveCoreRecipe = {
+                APHE, APHE, APHE,
+                APHE, PowerCore, APHE,
+                APHE, APHE, APHE
+        };
+        SlimefunItem ExplosiveCoreItem = new SlimefunItem(RU_MATERIALS, ExplosiveCore, RecipeType.ENHANCED_CRAFTING_TABLE, ExplosiveCoreRecipe);
+        ExplosiveCoreItem.register(this);
+
 
         //OLD PLUGIN ITEMS, MERGE//
         //HEHE//
@@ -484,7 +519,27 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-
+        SlimefunItemStack GlacialStaff = new SlimefunItemStack("GLACIAL_STAFF", Material.IRON_HOE, "&bGlacial Staff", "", "&e&lRight Click to Cast", "&eSynthesizes energy itself", "&cPierces through Shields", "&cAOE");
+        ItemMeta GSmeta = GlacialStaff.getItemMeta();
+        if (GSmeta != null) {
+            // Enchants
+            GSmeta.addEnchant(Enchantment.LOYALTY, 3, true);
+            GlacialStaff.setItemMeta(GSmeta);
+        }
+        List<String> lore = new ArrayList<>(GSmeta.getLore());
+        lore.add("");
+        lore.add("Run! Take cover!");
+        if (GSmeta != null) {
+            GSmeta.setLore(lore);
+            GlacialStaff.setItemMeta(GSmeta);
+        }
+        ItemStack[] glacialStaffRecipe = {
+                ExplosiveCore, ExplosiveCore, ExplosiveCore,
+                ExplosiveCore, IcicleStaff, ExplosiveCore,
+                ExplosiveCore, ExplosiveCore, ExplosiveCore
+        };
+        SlimefunItem glacialStaffItem = new SlimefunItem(RU_TOOLS, GlacialStaff, RecipeType.ARMOR_FORGE, glacialStaffRecipe);
+        glacialStaffItem.register(this);
 
         //----------MACHINES BELOW----------//
 
@@ -520,6 +575,10 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register the IcicleStaffListener as a listener
         //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new IcicleStaffListener(this), this);
+
+        // Register the GlacialStaffListener as a listener
+        //Relies on lore to activate//
+        getServer().getPluginManager().registerEvents(new GlacialStaffListener(this), this);
 
     }
 
