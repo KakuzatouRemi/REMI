@@ -53,7 +53,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
-
+import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.implementation.items.electric.Capacitor;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
@@ -455,6 +462,30 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
+        SlimefunItemStack IcicleStaff = new SlimefunItemStack("ICICLE_STAFF", Material.IRON_HOE, "&bIcicle Staff", "", "&e&lRight Click to Cast", "&eUses Ice as source of energy", "&cPierces through Shields");
+        ItemMeta ISMeta = IcicleStaff.getItemMeta();
+        if (ISMeta != null) {
+            // Enchants
+            ISMeta.addEnchant(Enchantment.LOYALTY, 2, true);
+            // Add the "Icicle Staff Identifier" to the lore
+            List<String> lore = new ArrayList<>(ISMeta.getLore());
+            lore.add("");
+            lore.add("Don't freeze me pls");
+            ISMeta.setLore(lore);
+            IcicleStaff.setItemMeta(ISMeta);
+        }
+        ItemStack[] icicleStaffRecipe = {
+                IceCore, IceCore, IceCore,
+                IceCore, IceBlaster, IceCore,
+                IceCore, IceCore, IceCore
+        };
+        SlimefunItem icicleStaffItem = new SlimefunItem(RU_TOOLS, IcicleStaff, RecipeType.ARMOR_FORGE, icicleStaffRecipe);
+        icicleStaffItem.register(this);
+
+        //HEHE//
+
+
+
         //----------MACHINES BELOW----------//
 
         /*
@@ -468,6 +499,8 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         RezinizerMachine.register(this);
         */
 
+        //HEHE//
+
         //----------ENCHANTS BELOW----------//
 
         //----------SKILLS BELOW----------//
@@ -480,9 +513,13 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new AugmentedEndSwordSkillListener(this, AugmentedEndSword), this);
 
-        // Register the IceGunListener as a listener
+        // Register the IceBlasterListener as a listener
         //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new IceBlasterListener(this), this);
+
+        // Register the IcicleStaffListener as a listener
+        //Relies on lore to activate//
+        getServer().getPluginManager().registerEvents(new IcicleStaffListener(this), this);
 
     }
 

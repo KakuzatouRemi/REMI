@@ -1,6 +1,5 @@
 package me.REMILIA.RemiliaUtilities;
 
-import me.REMILIA.RemiliaUtilities.RemiliaUtilities;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -15,6 +14,8 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.entity.ExperienceOrb;
+
+import java.util.Objects;
 
 public class IceBlasterListener implements Listener {
 
@@ -47,8 +48,7 @@ public class IceBlasterListener implements Listener {
 
                             if (spawnLoc.getWorld() != null) {
                                 for (org.bukkit.entity.Entity nearbyEntity : spawnLoc.getWorld().getNearbyEntities(spawnLoc, 0.5, 0.5, 0.5)) {
-                                    if (nearbyEntity instanceof LivingEntity) {
-                                        LivingEntity livingEntity = (LivingEntity) nearbyEntity;
+                                    if (nearbyEntity instanceof LivingEntity livingEntity) {
                                         if (!livingEntity.equals(player)) {
                                             double damage = 8.0; // Apply 8 hearts of damage to all living entities within range
                                             livingEntity.damage(damage);
@@ -79,7 +79,7 @@ public class IceBlasterListener implements Listener {
                                 return;
                             }
 
-                            spawnLoc.getWorld().spawnParticle(Particle.BLOCK_CRACK, spawnLoc, 10, 0.1, 0.1, 0.1, 0, Material.FROSTED_ICE.createBlockData());
+                            Objects.requireNonNull(spawnLoc.getWorld()).spawnParticle(Particle.BLOCK_CRACK, spawnLoc, 10, 0.1, 0.1, 0.1, 0, Material.FROSTED_ICE.createBlockData());
                             spawnLoc.add(spawnLoc.getDirection().normalize());
                             ticks++;
                         }
