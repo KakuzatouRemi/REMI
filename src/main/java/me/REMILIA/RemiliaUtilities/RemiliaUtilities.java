@@ -3,20 +3,12 @@ package me.REMILIA.RemiliaUtilities;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import net.minecraft.world.item.Item;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -26,41 +18,13 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
 //For fixing new cannot find symbol stuff
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.meta.Damageable;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.BlockIterator;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.plugin.java.JavaPlugin;
-import javax.annotation.Nonnull;
-import java.lang.reflect.Field;
-import java.util.*;
-import org.bukkit.event.Listener;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
-import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
-import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
+import javax.annotation.Nonnull;
+import java.util.*;
+
 import org.bukkit.NamespacedKey;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
-import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.items.electric.Capacitor;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
@@ -131,7 +95,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 Material.PAPER, // Material
                 "&6Note", // Display name
                 "&7Needs a lot of grinding", "",
-                "&4I'm not a demon! -Remi" // Multiline lore
+                "&4I'm not a demon! -Remi" // Multiline BSlore
         );
         ItemStack[] NoteRecipe = {null, null, null, null, null, null, null, null, null};
         SlimefunItem NoteItem = new SlimefunItem(RU_INFO, Note, RecipeType.NULL, NoteRecipe);
@@ -282,6 +246,29 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
+        SlimefunItemStack DenseObsidian = new SlimefunItemStack("DENSE_OBSIDIAN", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdjZjkyZTQxYWI5YmIzNmNkMjI4MDU5ZmM0ZWE2N2FlMmY1MTcxNzI2NTUyNDY2ODU3MDgxNTc3MTRlZWMxZSJ9fX0=", "&7Dense Obsidian", "&7Heavy AF");
+        ItemStack[] DenseObsidianRecipe = {
+                new SlimefunItemStack(SlimefunItems.WITHER_PROOF_OBSIDIAN,8), null, null,
+                null,null,null,
+                null,null,null
+        };
+        SlimefunItem DenseObsidianItem = new SlimefunItem(RU_MATERIALS, DenseObsidian, RecipeType.COMPRESSOR, DenseObsidianRecipe);
+        DenseObsidianItem.register(this);
+
+        //HEHE//
+
+        SlimefunItemStack ActivatedObsidian = new SlimefunItemStack("ACTIVATED_OBSIDIAN", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2FkZTc2ZjVkNTkxNjMyZDkzMjRhYjk5ZDc0NzI1MWNhMzc0N2UwNGNhZjQxZDAzNzBmODUwZjllYzg3YTEzZCJ9fX0=", "&4Activated Obsidian", "&7Much heavier than before");
+        ItemStack[] ActivatedObsidianRecipe = {
+                DenseObsidian, DenseObsidian, DenseObsidian,
+                DenseObsidian, new ItemStack(Material.REDSTONE_BLOCK), DenseObsidian,
+                DenseObsidian, DenseObsidian, DenseObsidian
+        };
+        SlimefunItem ActivatedObsidianItem = new SlimefunItem(RU_MATERIALS, ActivatedObsidian, RecipeType.ENHANCED_CRAFTING_TABLE, ActivatedObsidianRecipe);
+        ActivatedObsidianItem.register(this);
+
+
+        //HEHE//
+
         SlimefunItemStack PowerCore = new SlimefunItemStack("POWER_CORE",
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWIxMGVkOTQwODBhMDc1NDZhMjQ1ZWM4MzdjZmM1ODE0Yzc2NThjN2VmMzM3YmUwMzVhMTFiMmUxZTAzYmExNiJ9fX0=",
                 "&8Power Core", "&cBetter than lithium-ion batteries");
@@ -325,6 +312,16 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem ExplosiveCoreItem = new SlimefunItem(RU_MATERIALS, ExplosiveCore, RecipeType.ENHANCED_CRAFTING_TABLE, ExplosiveCoreRecipe);
         ExplosiveCoreItem.register(this);
 
+        //HEHE//
+
+        SlimefunItemStack ProtectionCore = new SlimefunItemStack("PROTECTION_CORE", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFjMGU2OWYyY2RiNTQyNmFhZWQ3MTFjZTAzZWE2ZDcwOWM5MmU5YmViODRhZDFkMjJiNTg0YzQ2MWQ1MzM1ZCJ9fX0=", "&bProtection Core", "&cCan't lift bro?");
+        ItemStack[] ProtectionCoreRecipe = {
+                ActivatedObsidian, ActivatedObsidian, ActivatedObsidian,
+                ActivatedObsidian, PowerCore, ActivatedObsidian,
+                ActivatedObsidian, ActivatedObsidian, ActivatedObsidian
+        };
+        SlimefunItem ProtectionCoreItem = new SlimefunItem(RU_MATERIALS, ProtectionCore, RecipeType.ENHANCED_CRAFTING_TABLE, ProtectionCoreRecipe);
+        ProtectionCoreItem.register(this);
 
         //OLD PLUGIN ITEMS, MERGE//
         //HEHE//
@@ -436,11 +433,11 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         if (itemMeta != null) {
             itemMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 10, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND));
             itemMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, new AttributeModifier(UUID.randomUUID(), "generic.attackSpeed", 2.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND));
-            // Add the "End Sword Identifier" to the lore
-            List<String> lore = new ArrayList<>(itemMeta.getLore());
-            lore.add("");
-            lore.add("It's screaming at you");
-            itemMeta.setLore(lore);
+            // Add the "End Sword Identifier" to the BSlore
+            List<String> ESlore = new ArrayList<>(itemMeta.getLore());
+            ESlore.add("");
+            ESlore.add("It's screaming at you");
+            itemMeta.setLore(ESlore);
             EndSword.setItemMeta(itemMeta);
         }
         ItemStack[] endSwordRecipe = {null, HeavyPearl, null, null, HeavyPearl, null, null, ReinforcedHandle, null};
@@ -459,11 +456,11 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         if (AESMeta != null) {
             AESMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 14, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND));
             AESMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, new AttributeModifier(UUID.randomUUID(), "generic.attackSpeed", 3.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND));
-            // Add the "Augmented End Sword Identifier" to the lore
-            List<String> lore = new ArrayList<>(AESMeta.getLore());
-            lore.add("");
-            lore.add("It's staring at you");
-            AESMeta.setLore(lore);
+            // Add the "Augmented End Sword Identifier" to the BSlore
+            List<String> AESlore = new ArrayList<>(AESMeta.getLore());
+            AESlore.add("");
+            AESlore.add("It's staring at you");
+            AESMeta.setLore(AESlore);
             AugmentedEndSword.setItemMeta(AESMeta);
         }
         ItemStack[] augmentedEndSwordRecipe = {
@@ -480,11 +477,11 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         if (IBMeta != null) {
             // Enchants
             IBMeta.addEnchant(Enchantment.LOYALTY, 1, true);
-            // Add the "Ice Blaster Identifier" to the lore
-            List<String> lore = new ArrayList<>(IBMeta.getLore());
-            lore.add("");
-            lore.add("Don't snipe me pls");
-            IBMeta.setLore(lore);
+            // Add the "Ice Blaster Identifier" to the BSlore
+            List<String> IBlore = new ArrayList<>(IBMeta.getLore());
+            IBlore.add("");
+            IBlore.add("Don't snipe me pls");
+            IBMeta.setLore(IBlore);
             IceBlaster.setItemMeta(IBMeta);
         }
         ItemStack[] iceBlasterRecipe = {
@@ -502,11 +499,11 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         if (ISMeta != null) {
             // Enchants
             ISMeta.addEnchant(Enchantment.LOYALTY, 2, true);
-            // Add the "Icicle Staff Identifier" to the lore
-            List<String> lore = new ArrayList<>(ISMeta.getLore());
-            lore.add("");
-            lore.add("Don't freeze me pls");
-            ISMeta.setLore(lore);
+            // Add the "Icicle Staff Identifier" to the BSlore
+            List<String> ISlore = new ArrayList<>(ISMeta.getLore());
+            ISlore.add("");
+            ISlore.add("Don't freeze me pls");
+            ISMeta.setLore(ISlore);
             IcicleStaff.setItemMeta(ISMeta);
         }
         ItemStack[] icicleStaffRecipe = {
@@ -519,18 +516,18 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        SlimefunItemStack GlacialStaff = new SlimefunItemStack("GLACIAL_STAFF", Material.IRON_HOE, "&bGlacial Staff", "", "&e&lRight Click to Cast", "&eSynthesizes energy itself", "&cPierces through Shields", "&cAOE");
+        SlimefunItemStack GlacialStaff = new SlimefunItemStack("GLACIAL_STAFF", Material.IRON_HOE, "&bGlacial Staff", "", "&e&lRight Click to Cast", "&e&lLeft Click to Change Mode", "&eSynthesizes energy itself", "&cPierces through Shields", "&cSplash damage", "&bPortable fire extinguisher");
         ItemMeta GSmeta = GlacialStaff.getItemMeta();
         if (GSmeta != null) {
             // Enchants
             GSmeta.addEnchant(Enchantment.LOYALTY, 3, true);
             GlacialStaff.setItemMeta(GSmeta);
         }
-        List<String> lore = new ArrayList<>(GSmeta.getLore());
-        lore.add("");
-        lore.add("Run! Take cover!");
+        List<String> GSlore = new ArrayList<>(GSmeta.getLore());
+        GSlore.add("");
+        GSlore.add("Run! Take cover!");
         if (GSmeta != null) {
-            GSmeta.setLore(lore);
+            GSmeta.setLore(GSlore);
             GlacialStaff.setItemMeta(GSmeta);
         }
         ItemStack[] glacialStaffRecipe = {
@@ -540,6 +537,29 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         };
         SlimefunItem glacialStaffItem = new SlimefunItem(RU_TOOLS, GlacialStaff, RecipeType.ARMOR_FORGE, glacialStaffRecipe);
         glacialStaffItem.register(this);
+
+        //HEHE//
+
+        SlimefunItemStack BarrierSword = new SlimefunItemStack("BARRIER_SWORD", Material.IRON_SWORD, "&6Barrier Sword", "", "&e&lRight Click Ability", "&e&lInvulnerability", "&e&l15 Second Duration", "&e&lCooldown 75 Seconds");
+        ItemMeta BSMeta = BarrierSword.getItemMeta();
+        // Add BSlore
+        List<String> BSlore = new ArrayList<>(BSMeta.getLore());
+        BSlore.add("");
+        BSlore.add("Basic Defensive Spell");
+        if (BSMeta != null) {
+            BSMeta.setLore(BSlore);
+            BarrierSword.setItemMeta(BSMeta);
+        }
+        // Apply enchantments
+        BSMeta.addEnchant(Enchantment.DURABILITY, 10, true);
+        BarrierSword.setItemMeta(BSMeta);
+        ItemStack[] BarrierSwordRecipe = {
+                null, ProtectionCore, null,
+                null, ProtectionCore, null,
+                null, ReinforcedHandle, null
+        };
+        SlimefunItem BarrierSwordItem = new SlimefunItem(RU_TOOLS, BarrierSword, RecipeType.ARMOR_FORGE, BarrierSwordRecipe);
+        BarrierSwordItem.register(this);
 
         //----------MACHINES BELOW----------//
 
@@ -558,29 +578,39 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //----------ENCHANTS BELOW----------//
 
-        //----------SKILLS BELOW----------//
+        //----------LISTENERS BELOW----------//
 
         //EndSwordSkillListener FALLBACK_REWRITE//
-        //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new EndSwordSkillListener(this, EndSword), this);
 
         //AugmentedEndSwordSkillListener FALLBACK_REWRITE//
-        //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new AugmentedEndSwordSkillListener(this, AugmentedEndSword), this);
 
         // Register the IceBlasterListener as a listener
-        //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new IceBlasterListener(this), this);
 
         // Register the IcicleStaffListener as a listener
-        //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new IcicleStaffListener(this), this);
 
         // Register the GlacialStaffListener as a listener
-        //Relies on lore to activate//
         getServer().getPluginManager().registerEvents(new GlacialStaffListener(this), this);
 
+        // Register BarrierSwordSkillListener
+        getServer().getPluginManager().registerEvents(new BarrierSwordSkillListener(this), this);
+
+
     }
+
+
+
+    // Helper method to generate a random coordinate within a certain range
+    private double getRandomCoordinate() {
+        // Replace min and max values with your desired range
+        double min = -100;
+        double max = 100;
+        return min + Math.random() * (max - min);
+    }
+
 
     @Override
     public void onDisable() {

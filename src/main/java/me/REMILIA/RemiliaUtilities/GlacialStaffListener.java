@@ -85,6 +85,9 @@ public class GlacialStaffListener implements Listener {
                             }
 
                             if (spawnLoc.getBlock().getType() != Material.AIR && spawnLoc.getBlock().getType() != Material.WATER) {
+                                // Extinguish fire blocks within 3 blocks
+                                extinguishFireBlocks(spawnLoc, 3);
+
                                 // Damage entities within 3 blocks if hit a block
                                 for (LivingEntity nearbyLivingEntity : spawnLoc.getWorld().getNearbyEntities(spawnLoc, 3, 3, 3)
                                         .stream()
@@ -96,7 +99,6 @@ public class GlacialStaffListener implements Listener {
                                         nearbyLivingEntity.damage(damage);
                                     }
                                 }
-
 
                                 cancel();
                                 return;
@@ -133,5 +135,19 @@ public class GlacialStaffListener implements Listener {
         // For example, you can use entity's type to determine how much XP to drop
         // and take into account any plugins that modify XP yields
         return 0; // Replace with your implementation
+    }
+
+    // Method to extinguish fire blocks within a given radius
+    private void extinguishFireBlocks(Location location, int radius) {
+        for (int x = location.getBlockX() - radius; x <= location.getBlockX() + radius; x++) {
+            for (int y = location.getBlockY() - radius; y <= location.getBlockY() + radius; y++) {
+                for (int z = location.getBlockZ() - radius; z <= location.getBlockZ() + radius; z++) {
+                    Location blockLoc = new Location(location.getWorld(), x, y, z);
+                    if (blockLoc.getBlock().getType() == Material.FIRE) {
+                        blockLoc.getBlock().setType(Material.AIR);
+                    }
+                }
+            }
+        }
     }
 }
