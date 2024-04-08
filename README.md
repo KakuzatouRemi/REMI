@@ -22,15 +22,19 @@ Intended for my server, and to those who want to try it
   + 1.4x faster projectile
   + Splash Damage / AOE, 3 block radius around point of impact
   + 0.6s Cooldown
+  + Extinguishes fire blocks on its path
   + Range 30~40 blocks
++ Barrier Sword
+  + 15s Invulnerability 
+  + 75s Cooldown
     <br>
-    Known issues: Items are placable, doesn't affect much
+    Known issues: 
+    + Items are placable, doesn't affect much
+    + Tools not compatible with FoxyMachines' Improvement Forge & Core
     <br>
     <br>
-    <br>
+    <br> 
     My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
     <br>
     Hehe I'm new to this
     <br>
-    <br>
-    lmao forgor to commit/upload 0.15 source code (still 0.14, but the release is 0.15, uploaded locally from my pc)
