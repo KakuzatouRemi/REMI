@@ -28,13 +28,25 @@ Intended for my server, and to those who want to try it
   + 15s Invulnerability 
   + 75s Cooldown
     <br>
-    Known issues: 
-    + Items are placable, doesn't affect much
-    + Tools not compatible with FoxyMachines' Improvement Forge & Core
-    <br>
-    <br>
-    <br> 
-    My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
-    <br>
-    Hehe I'm new to this
-    <br>
+# Generators
++ Lunisolar Panel I
+  + 4J/s
+  + 8J Buffer
+  + Works day and night
++ Lunisolar Panel I
+  + 16J/s
+  + 32J Buffer
+  + Works day and night
+<br>
+<br>
+
+Known issues: 
++ Items are placeable, doesn't affect much
++ Tools incompatible with FoxyMachines' Improvement Forge & Core
+<br>
+<br>
+
+My IGNs [LoveHeartX2R, RemiliaX, KakuzatouRemi]
+<br>
+Hehe I'm new to this
+<br>

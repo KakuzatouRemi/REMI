@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Updated README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/BarrierSwordSkillListener.java" afterDir="false" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="&#10;Added feature for Glacial Staff&#10;Added Barrier Sword">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.15-Alpha.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.16-Alpha.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,24 +69,36 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Maven.RemiliaUtilities [clean,package].executor": "Run",
+    "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/IntJI Projects/RemiliaUtilities v0.16-Alpha",
+    "last_opened_file_path": "E:/IntJI Projects/EcoPower",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   },
   "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/Change Language": [
+      "TEXT"
+    ],
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
       "TEXT"
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.REMILIA.RemiliaUtilities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Remilia\AppData\Roaming\JetBrains\IdeaIC2024.1\scratches" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="REMI" />
@@ -197,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712543461327</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated README.md&#10;Added feature for Glacial Staff&#10;Added Barrier Sword">
+      <option name="closed" value="true" />
+      <created>1712578982143</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712578982143</updated>
+    </task>
+    <task id="LOCAL-00012" summary="&#10;Added feature for Glacial Staff&#10;Added Barrier Sword">
+      <option name="closed" value="true" />
+      <created>1712579285322</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712579285322</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +243,19 @@
     <MESSAGE value="Added GlacialStaff" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="Updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
+    <MESSAGE value="Updated README.md&#10;Added feature for Glacial Staff&#10;Added Barrier Sword" />
+    <MESSAGE value="&#10;Added feature for Glacial Staff&#10;Added Barrier Sword" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Added feature for Glacial Staff&#10;Added Barrier Sword" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java</url>
+          <line>425</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

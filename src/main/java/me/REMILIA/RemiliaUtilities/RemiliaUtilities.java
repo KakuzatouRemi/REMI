@@ -3,6 +3,7 @@ package me.REMILIA.RemiliaUtilities;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.implementation.items.electric.generators.SolarGenerator;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.inventory.*;
@@ -19,12 +20,14 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 //For fixing new cannot find symbol stuff
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
+//TEMP, MIGHT NEED
 
 import javax.annotation.Nonnull;
 import java.util.*;
 
 import org.bukkit.NamespacedKey;
-import org.bukkit.inventory.ItemStack;
 
 
 public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
@@ -70,6 +73,12 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 new NamespacedKey(this, "RU_TOOLS"), // Key for the sub-group
                 RU, // Parent group (RU)
                 new CustomItemStack(Material.DIAMOND_SWORD, "&6Tools") // Item representing the sub-group
+        );
+        // Define another sub-category group, belonging to the main category RU
+        final SubItemGroup RU_PANELS = new SubItemGroup(
+                new NamespacedKey(this, "RU_PANELS"), // Key for the sub-group
+                RU, // Parent group (RU)
+                new CustomItemStack(Material.DAYLIGHT_DETECTOR, "&bPanels") // Item representing the sub-group
         );
         /* UNUSED YET
         // Define the Enchants subgroup
@@ -348,7 +357,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        SlimefunItemStack MagicalContainer = new SlimefunItemStack("MAGICAL_CONTAINER", "b91b7b21725f146d29c192b745d79d22603267c7ad893badeb6546e746600060", "&6Magical Container", new String[]{"&7Holds molten flowers"});
+        SlimefunItemStack MagicalContainer = new SlimefunItemStack("MAGICAL_CONTAINER", "b91b7b21725f146d29c192b745d79d22603267c7ad893badeb6546e746600060", "&6Magical Container", new String[]{"&7Magical Storage"});
         ItemStack[] MagicalContainerRecipe = new ItemStack[]{
                 LapisCrystal, RedstoneCrystal, LapisCrystal,
                 RedstoneCrystal, new ItemStack(Material.GLASS), RedstoneCrystal,
@@ -360,7 +369,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         //HEHE//
 
         //Waiting for a working Machine code before continuing
-        //81711f139d3bca577ea7cfc1b8d84594db87dd066d6f00f73a9ae33bc9c2aed1
         SlimefunItemStack LilacBundle = new SlimefunItemStack(
                 "LILAC_BUNDLE",
                 Material.MAGENTA_DYE,
@@ -375,7 +383,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        //ca71142706c084f70a95fa9955716baf2680ab7cff3771c427f5b116adf43bfa
         SlimefunItemStack SunflowerBundle = new SlimefunItemStack(
                 "SUNFLOWER_BUNDLE",
                 Material.YELLOW_DYE,
@@ -390,7 +397,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        //17732caeb88cce8d18593df0ffa343305341741be647aac42e4ce4d250675765
         SlimefunItemStack PeonyBundle = new SlimefunItemStack(
                 "PEONY_BUNDLE",
                 Material.PINK_DYE,
@@ -405,7 +411,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        //c469268e0643e69466738d0458ad9d9b8327ec14ae9bca79a990ea20776a2a28
         SlimefunItemStack RoseBundle = new SlimefunItemStack(
                 "ROSE_BUNDLE",
                 Material.RED_DYE,
@@ -418,6 +423,148 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem RoseBundleItem = new SlimefunItem(RU_MATERIALS, RoseBundle, RecipeType.COMPRESSOR, RoseBundleRecipe);
         RoseBundleItem.register(this);
 
+        //HEHE//
+        SlimefunItemStack Jade = new SlimefunItemStack(
+                "JADE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM0ZjAwZWNiOTY3NzAyODBjOGQ2NTNjMTg5MGU4N2FiNWIxMjVmODUyOGU3YWQ0ZmVjMWQzMWViZDEyMjg3YiJ9fX0=", // Material (example, change as needed)
+                "&aJade", // Display name
+                "&7A beautiful green gemstone", // Description
+                "&7Found deep in the earth" // Additional lore
+        );
+        ItemStack[] jadeRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem jadeItem = new SlimefunItem(RU_MATERIALS, Jade, RecipeType.NULL, jadeRecipe);
+        jadeItem.register(this);
+        SlimefunItemStack Moonstone = new SlimefunItemStack(
+                "MOONSTONE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5M2VkOTJiMWE5YTI0YWQwNzJhY2Y2ZThmY2NmY2VkZTFiOGMyNzEzNmEyYjQyNTc2ZWU4NWRmN2RjMTE0YiJ9fX0=", // Material (example, change as needed)
+                "&7Moonstone", // Display name
+                "&fA mystical gemstone from the moon", // Description
+                "&7Said to possess magical properties" // Additional lore
+        );
+        ItemStack[] moonstoneRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem moonstoneItem = new SlimefunItem(RU_MATERIALS, Moonstone, RecipeType.NULL, moonstoneRecipe);
+        moonstoneItem.register(this);
+        SlimefunItemStack Onyx = new SlimefunItemStack(
+                "ONYX", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmUwY2JjMThhYTgzODk2Zjk4NGI1MmIyMWU1MmYyN2ViOGE3MmUyNmM0NzE3OWZkNzkzMjk3ZjNiN2M2ZmJiZSJ9fX0=", // Material (example, change as needed)
+                "&8Onyx", // Display name
+                "&7A dark, glossy gemstone", // Description
+                "&7Known for its protective properties" // Additional lore
+        );
+        ItemStack[] onyxRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem onyxItem = new SlimefunItem(RU_MATERIALS, Onyx, RecipeType.NULL, onyxRecipe);
+        onyxItem.register(this);
+        SlimefunItemStack Rhodonite = new SlimefunItemStack(
+                "RHODONITE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA2N2ZjM2U4MWQ2NDU5MmY3NTEzYWVlYTc3M2U2MTYzNDMzYmY0MTg3YzRiZjcyYTc5MDM4Y2ZjNWVkYzE1ZCJ9fX0=", // Material (example, change as needed)
+                "&dRhodonite", // Display name
+                "&7A pink gemstone with black veins", // Description
+                "&7Believed to promote love and emotional healing" // Additional lore
+        );
+        ItemStack[] rhodoniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem rhodoniteItem = new SlimefunItem(RU_MATERIALS, Rhodonite, RecipeType.NULL, rhodoniteRecipe);
+        rhodoniteItem.register(this);
+        SlimefunItemStack Amethyst = new SlimefunItemStack(
+                "AMETHYST", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzFkN2VlZjMzNzE1MzUxY2Y3MjJlYTM2M2FhOTkxNGExNmQ2NDExODFmNjc0ZGQ1OTJhODM2OGUyMWQ0M2I2YiJ9fX0=", // Material (example, change as needed)
+                "&5Amethyst", // Display name
+                "&7A purple gemstone with a soothing energy", // Description
+                "&7Associated with clarity and intuition" // Additional lore
+        );
+        ItemStack[] amethystRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem amethystItem = new SlimefunItem(RU_MATERIALS, Amethyst, RecipeType.NULL, amethystRecipe);
+        amethystItem.register(this);
+        SlimefunItemStack Tanzanite = new SlimefunItemStack(
+                "TANZANITE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWY4ZDYzZTkwN2JkZmYyNTJhMDRlMGVhZWM5OGI1MmE4Nzk1OGQ3MzdkOGU0OGQ0MzE5ZmE1OTFjMzFkMGUzMSJ9fX0=", // Material (example, change as needed)
+                "&bTanzanite", // Display name
+                "&7A rare blue-violet gemstone", // Description
+                "&7Found only in Tanzania" // Additional lore
+        );
+        ItemStack[] tanzaniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem tanzaniteItem = new SlimefunItem(RU_MATERIALS, Tanzanite, RecipeType.NULL, tanzaniteRecipe);
+        tanzaniteItem.register(this);
+        SlimefunItemStack Sapphire = new SlimefunItemStack(
+                "SAPPHIRE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzllZjMzYTNlNzUzY2JhMjliNmMxMzRhMWJkNjc0MzhmNmQ2NjlmNmM0Yzc1NjI5MmNjMjBjMzEyMDkxMDUyOCJ9fX0=", // Material (example, change as needed)
+                "&9Sapphire", // Display name
+                "&7A precious blue gemstone", // Description
+                "&7Associated with wisdom and royalty" // Additional lore
+        );
+        ItemStack[] sapphireRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem sapphireItem = new SlimefunItem(RU_MATERIALS, Sapphire, RecipeType.NULL, sapphireRecipe);
+        sapphireItem.register(this);
+        SlimefunItemStack Kyanite = new SlimefunItemStack(
+                "KYANITE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTkxZWE0N2QwYTkxMmYwMjc2ODUyOGE4M2FlZTNmZTU3OTE3ODMyODgwOThiOTBlOWMwOGExZTBmN2VlNjY3OSJ9fX0=", // Material (example, change as needed)
+                "&3Kyanite", // Display name
+                "&7A blue mineral often used in jewelry", // Description
+                "&7Known for its calming and balancing properties" // Additional lore
+        );
+        ItemStack[] kyaniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem kyaniteItem = new SlimefunItem(RU_MATERIALS, Kyanite, RecipeType.NULL, kyaniteRecipe);
+        kyaniteItem.register(this);
+        SlimefunItemStack Turquoise = new SlimefunItemStack(
+                "TURQUOISE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlYWNkYjA2OTRlZTEwYmEwYTk4NjZlZTQ5NTA5MDJmNGEzZGVkZTA3ODIwMWRlMDU3NjJkM2ZkZjI2M2NlMSJ9fX0=", // Material (example, change as needed)
+                "&bTurquoise", // Display name
+                "&7A blue-green gemstone prized for its color", // Description
+                "&7Believed to bring protection and good fortune" // Additional lore
+        );
+        ItemStack[] turquoiseRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem turquoiseItem = new SlimefunItem(RU_MATERIALS, Turquoise, RecipeType.NULL, turquoiseRecipe);
+        turquoiseItem.register(this);
+        SlimefunItemStack Emerald = new SlimefunItemStack(
+                "EMERALD", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjczNTRiODc4ODQzYzcxZWE1MzA2ZmViM2RjOGI3NjdmNzY4Y2U2MDM5ZmEwZTViYjZmMjNhZDk4ZGFmNmM2ZiJ9fX0=", // Material (example, change as needed)
+                "&aEmerald", // Display name
+                "&7A rare green gemstone", // Description
+                "&7Valued for its beauty and rarity" // Additional lore
+        );
+        ItemStack[] emeraldRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem emeraldItem = new SlimefunItem(RU_MATERIALS, Emerald, RecipeType.NULL, emeraldRecipe);
+        emeraldItem.register(this);
+        SlimefunItemStack Reridot = new SlimefunItemStack(
+                "PERIDOT", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWUxZDRlOWNlMWYxNjg0Nzg2OTI3ZTEwZjU5Zjk2ZDNhNTZjNzkyZThhOWIzYzVjNmE3NDU2OGU1Mjk3YjU2NSJ9fX0=", // Material (example, change as needed)
+                "&aPeridot", // Display name
+                "&7A green gemstone often found in volcanic areas", // Description
+                "&7Symbolizes strength and protection" // Additional lore
+        );
+        ItemStack[] peridotRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem peridotItem = new SlimefunItem(RU_MATERIALS, Reridot, RecipeType.NULL, peridotRecipe);
+        peridotItem.register(this);
+        SlimefunItemStack Topaz = new SlimefunItemStack(
+                "TOPAZ", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTU2NTJmMzcxNmQzOGQ4OTkxZTI4N2E4Y2JmN2YwNmU5ODI3OWE1MWFmODAwNTAzMDE4YmVjNzI1NDJkNjBjMyJ9fX0=", // Material (example, change as needed)
+                "&eTopaz", // Display name
+                "&7A yellow gemstone associated with positivity", // Description
+                "&7Thought to promote creativity and happiness" // Additional lore
+        );
+        ItemStack[] topazRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem topazItem = new SlimefunItem(RU_MATERIALS, Topaz, RecipeType.NULL, topazRecipe);
+        topazItem.register(this);
+        SlimefunItemStack Citrine = new SlimefunItemStack(
+                "CITRINE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFjNzIxMjhmMDcxMmFiYzM1ODgyNjg1ZjVkMDgxZTQ2YTRhZjNhYWJjNTMyYjMzNTQyODMwODBkZWU1OTA1ZCJ9fX0=", // Material (example, change as needed)
+                "&6Citrine", // Display name
+                "&7A yellow-orange gemstone associated with abundance", // Description
+                "&7Believed to attract wealth and success" // Additional lore
+        );
+        ItemStack[] citrineRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem citrineItem = new SlimefunItem(RU_MATERIALS, Citrine, RecipeType.NULL, citrineRecipe);
+        citrineItem.register(this);
+        SlimefunItemStack Garnet = new SlimefunItemStack(
+                "GARNET", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzcxZDcwOTY5NWJlNWM3ZTQ0ZDAyZTg2NDE2M2I2MTg1YzE0YmM5YjdiOGNiNWM0ODMwOWQzNjE3NWIxYjc1OCJ9fX0=", // Material (example, change as needed)
+                "&cGarnet", // Display name
+                "&7A deep red gemstone symbolizing love and passion", // Description
+                "&7Associated with strength and energy" // Additional lore
+        );
+        ItemStack[] garnetRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem garnetItem = new SlimefunItem(RU_MATERIALS, Garnet, RecipeType.NULL, garnetRecipe);
+        garnetItem.register(this);
+        //HEHE//
 
         //END OF OLD ITEMS//
 
@@ -561,6 +708,45 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem BarrierSwordItem = new SlimefunItem(RU_TOOLS, BarrierSword, RecipeType.ARMOR_FORGE, BarrierSwordRecipe);
         BarrierSwordItem.register(this);
 
+        //----------PANELS BELOW----------//
+
+        // Template for future gens
+        //GEN I
+        int LPIdayEnergy = 4; // Energy generated during the day
+        int LPInightEnergy = 4; // Energy generated during the night
+        int LPIcapacity = 8; // Buffer capacity
+        SlimefunItemStack LunisolarPanelI = new SlimefunItemStack("LUNISOLARPANELI", Material.DAYLIGHT_DETECTOR, "&bLuni&esolar &7Panel I",
+                "", "&9Works all-day", "",
+                "&7⇒ &e⚡ &7" + LPIcapacity + "J Buffer",
+                "&7⇒ &e⚡ &7" + LPIdayEnergy + "J/s (Day)",
+                "&7⇒ &e⚡ &7" + LPInightEnergy + "J/s (Night)"); // w/ multi-line lore
+        RecipeType LPIrecipeType = RecipeType.ENHANCED_CRAFTING_TABLE;
+        ItemStack[] recipe = {
+                SlimefunItems.SOLAR_PANEL, LapisCrystal, SlimefunItems.SOLAR_PANEL,
+                RedstoneCrystal, UnstablePearl, RedstoneCrystal,
+                SlimefunItems.SOLAR_PANEL, LapisCrystal, SlimefunItems.SOLAR_PANEL
+        };
+        // Create and register the Lunisolar Panel I
+        new SolarGenerator(RU_PANELS, LPIdayEnergy, LPInightEnergy, LunisolarPanelI, LPIrecipeType, recipe, LPIcapacity).register(this);
+
+        // GEN II
+        int LPIIdayEnergy = 16; // Energy generated during the day
+        int LPIInightEnergy = 16; // Energy generated during the night
+        int LPIIcapacity = 32; // Buffer capacity
+        SlimefunItemStack LunisolarPanelII = new SlimefunItemStack("LUNISOLARPANELII", Material.DAYLIGHT_DETECTOR, "&bLuni&esolar &7Panel II",
+                "", "&9Works all-day", "",
+                "&7⇒ &e⚡ &7" + LPIIcapacity + "J Buffer",
+                "&7⇒ &e⚡ &7" + LPIIdayEnergy + "J/s (Day)",
+                "&7⇒ &e⚡ &7" + LPIInightEnergy + "J/s (Night)"); // w/ multi-line lore
+        RecipeType LPIIrecipeType = RecipeType.ENHANCED_CRAFTING_TABLE;
+        ItemStack[] LPIIRecipe = {
+                LunisolarPanelI, LapisCrystal, LunisolarPanelI,
+                RedstoneCrystal, MagicalContainer, RedstoneCrystal,
+                LunisolarPanelI, LapisCrystal, LunisolarPanelI
+        };
+        // Create and register the Lunisolar Panel II
+        new SolarGenerator(RU_PANELS, LPIIdayEnergy, LPIInightEnergy, LunisolarPanelII, LPIIrecipeType, LPIIRecipe, LPIIcapacity).register(this);
+
         //----------MACHINES BELOW----------//
 
         /*
@@ -634,3 +820,59 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
     }
 
 }
+
+/*
+        <repository>
+            <id>slimefun-repo</id>
+            <url>https://repo.mrcookie Slimefun.me/content/groups/public/</url>
+        </repository>
+
+        <dependency>
+            <groupId>io.github.mooy1</groupId>
+            <artifactId>InfinityExpansion</artifactId>
+            <version>d995144</version>
+        </dependency>
+
+Purple eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3MTFmMTM5ZDNiY2E1NzdlYTdjZmMxYjhkODQ1OTRkYjg3ZGQwNjZkNmYwMGY3M2E5YWUzM2JjOWMyYWVkMSJ9fX0=
+Near Black eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzYyYjRmNTdkNDZiOGI3NTVhNzAzNTQwYmRkNTA0MDAzZmQ1M2Q0NDljNWVjNGY0NTBmYWE5NmFlMWIzZTdmZiJ9fX0=
+Pink eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc3MzJjYWViODhjY2U4ZDE4NTkzZGYwZmZhMzQzMzA1MzQxNzQxYmU2NDdhYWM0MmU0Y2U0ZDI1MDY3NTc2NSJ9fX0=
+Red eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ2OTI2OGUwNjQzZTY5NDY2NzM4ZDA0NThhZDlkOWI4MzI3ZWMxNGFlOWJjYTc5YTk5MGVhMjA3NzZhMmEyOCJ9fX0=
+Orange eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNlOTY4NTE1ODllMWZhODU0ZjA0ODRjMzBkNjM0ZmE0Njc0MDk2NmE2NmMwOTllMWM2NDIxOWMxMWNiYTdhNSJ9fX0=
+White eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTc1YjU4NmQyOWFhNGY2MzAwNjcwN2ZiZTk0YTMzYzg5YzIyNWY0OWIzYjQ0Y2IxODE3Mzg2NTZjOTQyZTI3NyJ9fX0=
+Yellow eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2E3MTE0MjcwNmMwODRmNzBhOTVmYTk5NTU3MTZiYWYyNjgwYWI3Y2ZmMzc3MWM0MjdmNWIxMTZhZGY0M2JmYSJ9fX0=
+Blue eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2MyMmY2MTYwNjgzMjY1YjhmZWYxMTMzMTdjMThjZjQ0ZWRmMmEwNjZiNTZhOGM4ZmQzMjVmNmI5MjBhNWY4In19fQ==
+
+        //HEHE//
+
+        SlimefunItemStack RedstoneLapisCrystal = new SlimefunItemStack("REDSTONE_LAPIS_CRYSTAL", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFmNTE0NmM1NDIwMWRjYjc4ZjljYjE4ZjA5YWFlZGVkODM4OWE1NTc2ODZhZmE4NzNiNGIzYmViZjk3MDE1NCJ9fX0=", "&6Redstone-Lapis Crystal", new String[]{"&7Seed Crystal"});
+        ItemStack[] RedstoneLapisCrystalRecipe = new ItemStack[]{
+                LapisCrystal, RedstoneCrystal, LapisCrystal,
+                RedstoneCrystal, new ItemStack(Material.GLASS), RedstoneCrystal,
+                LapisCrystal, RedstoneCrystal, LapisCrystal
+        };
+        SlimefunItem RedstoneLapisCrystalItem = new SlimefunItem(RU_MATERIALS, RedstoneLapisCrystal, RecipeType.ENHANCED_CRAFTING_TABLE, RedstoneLapisCrystalRecipe);
+        RedstoneLapisCrystalItem.register(this);
+
+        //HEHE//
+
+        // Recipe ingredients
+        SlimefunItemStack lilacBundle = new SlimefunItemStack("LILAC_BUNDLE", Material.LILAC, "&dLilac Bundle", "&7Bundled Lilac");
+        SlimefunItemStack sunflowerBundle = new SlimefunItemStack("SUNFLOWER_BUNDLE", Material.SUNFLOWER, "&eSunflower Bundle", "&7Bundled Sunflower");
+        SlimefunItemStack peonyBundle = new SlimefunItemStack("PEONY_BUNDLE", Material.PEONY, "&dPeony Bundle", "&7Bundled Peony");
+        SlimefunItemStack roseBundle = new SlimefunItemStack("ROSE_BUNDLE", Material.ROSE_BUSH, "&cRose Bundle", "&7Bundled Rose");
+
+        // Recipes
+        ItemStack[] lilacBundleRecipe = {lilacBundle, null, null, null, null, null, null, null, null};
+        ItemStack[] sunflowerBundleRecipe = {sunflowerBundle, null, null, null, null, null, null, null, null};
+        ItemStack[] peonyBundleRecipe = {peonyBundle, null, null, null, null, null, null, null, null};
+        ItemStack[] roseBundleRecipe = {roseBundle, null, null, null, null, null, null, null, null};
+
+        // Create and register the Flower Furnace
+        SlimefunItemStack itemGroup = null;
+        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, lilacBundleRecipe).register(this);
+        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, sunflowerBundleRecipe).register(this);
+        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, peonyBundleRecipe).register(this);
+        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, roseBundleRecipe).register(this);
+
+
+ */
