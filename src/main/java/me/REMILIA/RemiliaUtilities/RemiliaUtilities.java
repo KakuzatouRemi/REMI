@@ -32,6 +32,21 @@ import org.bukkit.NamespacedKey;
 
 public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
+    private SlimefunItem jadeItem;
+    private SlimefunItem moonstoneItem;
+    private SlimefunItem onyxItem;
+    private SlimefunItem rhodoniteItem;
+    private SlimefunItem amethystItem;
+    private SlimefunItem tanzaniteItem;
+    private SlimefunItem sapphireItem;
+    private SlimefunItem kyaniteItem;
+    private SlimefunItem turquoiseItem;
+    private SlimefunItem emeraldItem;
+    private SlimefunItem peridotItem;
+    private SlimefunItem topazItem;
+    private SlimefunItem citrineItem;
+    private SlimefunItem garnetItem;
+
     @Override
     public void onEnable() {
         // Read something from your config.yml
@@ -67,6 +82,12 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 new NamespacedKey(this, "RU_RES"), // Key for the sub-group
                 RU, // Parent group (RU)
                 new CustomItemStack(Material.END_CRYSTAL, "&bMaterials") // Item representing the sub-group
+        );
+        // Define a sub-category group, belonging to the main category RU
+        final SubItemGroup RU_GEMS = new SubItemGroup(
+                new NamespacedKey(this, "RU_GEMS"), // Key for the sub-group
+                RU, // Parent group (RU)
+                new CustomItemStack(Material.AMETHYST_SHARD, "&bGems") // Item representing the sub-group
         );
         // Define another sub-category group, belonging to the main category RU
         final SubItemGroup RU_TOOLS = new SubItemGroup(
@@ -104,7 +125,8 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 Material.PAPER, // Material
                 "&6Note", // Display name
                 "&7Needs a lot of grinding", "",
-                "&4I'm not a demon! -Remi" // Multiline BSlore
+                "&6Gems can be obtained by mining:",
+                "&6Stone & Deepslate"// Multiline BSlore
         );
         ItemStack[] NoteRecipe = {null, null, null, null, null, null, null, null, null};
         SlimefunItem NoteItem = new SlimefunItem(RU_INFO, Note, RecipeType.NULL, NoteRecipe);
@@ -432,7 +454,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Found deep in the earth" // Additional lore
         );
         ItemStack[] jadeRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem jadeItem = new SlimefunItem(RU_MATERIALS, Jade, RecipeType.NULL, jadeRecipe);
+        SlimefunItem jadeItem = new SlimefunItem(RU_GEMS, Jade, RecipeType.NULL, jadeRecipe);
         jadeItem.register(this);
         SlimefunItemStack Moonstone = new SlimefunItemStack(
                 "MOONSTONE", // Item ID
@@ -442,7 +464,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Said to possess magical properties" // Additional lore
         );
         ItemStack[] moonstoneRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem moonstoneItem = new SlimefunItem(RU_MATERIALS, Moonstone, RecipeType.NULL, moonstoneRecipe);
+        SlimefunItem moonstoneItem = new SlimefunItem(RU_GEMS, Moonstone, RecipeType.NULL, moonstoneRecipe);
         moonstoneItem.register(this);
         SlimefunItemStack Onyx = new SlimefunItemStack(
                 "ONYX", // Item ID
@@ -452,7 +474,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Known for its protective properties" // Additional lore
         );
         ItemStack[] onyxRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem onyxItem = new SlimefunItem(RU_MATERIALS, Onyx, RecipeType.NULL, onyxRecipe);
+        SlimefunItem onyxItem = new SlimefunItem(RU_GEMS, Onyx, RecipeType.NULL, onyxRecipe);
         onyxItem.register(this);
         SlimefunItemStack Rhodonite = new SlimefunItemStack(
                 "RHODONITE", // Item ID
@@ -462,7 +484,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Believed to promote love and emotional healing" // Additional lore
         );
         ItemStack[] rhodoniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem rhodoniteItem = new SlimefunItem(RU_MATERIALS, Rhodonite, RecipeType.NULL, rhodoniteRecipe);
+        SlimefunItem rhodoniteItem = new SlimefunItem(RU_GEMS, Rhodonite, RecipeType.NULL, rhodoniteRecipe);
         rhodoniteItem.register(this);
         SlimefunItemStack Amethyst = new SlimefunItemStack(
                 "AMETHYST", // Item ID
@@ -472,7 +494,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Associated with clarity and intuition" // Additional lore
         );
         ItemStack[] amethystRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem amethystItem = new SlimefunItem(RU_MATERIALS, Amethyst, RecipeType.NULL, amethystRecipe);
+        SlimefunItem amethystItem = new SlimefunItem(RU_GEMS, Amethyst, RecipeType.NULL, amethystRecipe);
         amethystItem.register(this);
         SlimefunItemStack Tanzanite = new SlimefunItemStack(
                 "TANZANITE", // Item ID
@@ -482,7 +504,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Found only in Tanzania" // Additional lore
         );
         ItemStack[] tanzaniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem tanzaniteItem = new SlimefunItem(RU_MATERIALS, Tanzanite, RecipeType.NULL, tanzaniteRecipe);
+        SlimefunItem tanzaniteItem = new SlimefunItem(RU_GEMS, Tanzanite, RecipeType.NULL, tanzaniteRecipe);
         tanzaniteItem.register(this);
         SlimefunItemStack Sapphire = new SlimefunItemStack(
                 "SAPPHIRE", // Item ID
@@ -492,7 +514,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Associated with wisdom and royalty" // Additional lore
         );
         ItemStack[] sapphireRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem sapphireItem = new SlimefunItem(RU_MATERIALS, Sapphire, RecipeType.NULL, sapphireRecipe);
+        SlimefunItem sapphireItem = new SlimefunItem(RU_GEMS, Sapphire, RecipeType.NULL, sapphireRecipe);
         sapphireItem.register(this);
         SlimefunItemStack Kyanite = new SlimefunItemStack(
                 "KYANITE", // Item ID
@@ -502,7 +524,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Known for its calming and balancing properties" // Additional lore
         );
         ItemStack[] kyaniteRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem kyaniteItem = new SlimefunItem(RU_MATERIALS, Kyanite, RecipeType.NULL, kyaniteRecipe);
+        SlimefunItem kyaniteItem = new SlimefunItem(RU_GEMS, Kyanite, RecipeType.NULL, kyaniteRecipe);
         kyaniteItem.register(this);
         SlimefunItemStack Turquoise = new SlimefunItemStack(
                 "TURQUOISE", // Item ID
@@ -512,7 +534,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Believed to bring protection and good fortune" // Additional lore
         );
         ItemStack[] turquoiseRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem turquoiseItem = new SlimefunItem(RU_MATERIALS, Turquoise, RecipeType.NULL, turquoiseRecipe);
+        SlimefunItem turquoiseItem = new SlimefunItem(RU_GEMS, Turquoise, RecipeType.NULL, turquoiseRecipe);
         turquoiseItem.register(this);
         SlimefunItemStack Emerald = new SlimefunItemStack(
                 "EMERALD", // Item ID
@@ -522,7 +544,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Valued for its beauty and rarity" // Additional lore
         );
         ItemStack[] emeraldRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem emeraldItem = new SlimefunItem(RU_MATERIALS, Emerald, RecipeType.NULL, emeraldRecipe);
+        SlimefunItem emeraldItem = new SlimefunItem(RU_GEMS, Emerald, RecipeType.NULL, emeraldRecipe);
         emeraldItem.register(this);
         SlimefunItemStack Reridot = new SlimefunItemStack(
                 "PERIDOT", // Item ID
@@ -532,7 +554,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Symbolizes strength and protection" // Additional lore
         );
         ItemStack[] peridotRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem peridotItem = new SlimefunItem(RU_MATERIALS, Reridot, RecipeType.NULL, peridotRecipe);
+        SlimefunItem peridotItem = new SlimefunItem(RU_GEMS, Reridot, RecipeType.NULL, peridotRecipe);
         peridotItem.register(this);
         SlimefunItemStack Topaz = new SlimefunItemStack(
                 "TOPAZ", // Item ID
@@ -542,7 +564,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Thought to promote creativity and happiness" // Additional lore
         );
         ItemStack[] topazRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem topazItem = new SlimefunItem(RU_MATERIALS, Topaz, RecipeType.NULL, topazRecipe);
+        SlimefunItem topazItem = new SlimefunItem(RU_GEMS, Topaz, RecipeType.NULL, topazRecipe);
         topazItem.register(this);
         SlimefunItemStack Citrine = new SlimefunItemStack(
                 "CITRINE", // Item ID
@@ -552,7 +574,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Believed to attract wealth and success" // Additional lore
         );
         ItemStack[] citrineRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem citrineItem = new SlimefunItem(RU_MATERIALS, Citrine, RecipeType.NULL, citrineRecipe);
+        SlimefunItem citrineItem = new SlimefunItem(RU_GEMS, Citrine, RecipeType.NULL, citrineRecipe);
         citrineItem.register(this);
         SlimefunItemStack Garnet = new SlimefunItemStack(
                 "GARNET", // Item ID
@@ -562,8 +584,9 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Associated with strength and energy" // Additional lore
         );
         ItemStack[] garnetRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem garnetItem = new SlimefunItem(RU_MATERIALS, Garnet, RecipeType.NULL, garnetRecipe);
+        SlimefunItem garnetItem = new SlimefunItem(RU_GEMS, Garnet, RecipeType.NULL, garnetRecipe);
         garnetItem.register(this);
+
         //HEHE//
 
         //END OF OLD ITEMS//
@@ -708,6 +731,49 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem BarrierSwordItem = new SlimefunItem(RU_TOOLS, BarrierSword, RecipeType.ARMOR_FORGE, BarrierSwordRecipe);
         BarrierSwordItem.register(this);
 
+        //HEHE// VW //
+        /*
+        SlimefunItemStack VerticalWand = new SlimefunItemStack("VERTICAL_WAND", Material.BLAZE_ROD, "&6Vertical Wand", "", "&bManual:", "&e&lRight Click to Place 1 Block Upwards", "Places the same block you right clicked", "&eTakes blocks from your inventory");
+        ItemMeta VWMeta = VerticalWand.getItemMeta();
+        // Add VWMeta lore
+        List<String> VWlore = new ArrayList<>(VWMeta.getLore());
+        VWlore.add("Experimental, WILL BREAK");
+        VWlore.add("I'm not short!");
+        if (VWMeta != null) {
+            VWMeta.setLore(VWlore);
+            VerticalWand.setItemMeta(VWMeta);
+        }
+        VerticalWand.setItemMeta(VWMeta);
+        ItemStack[] VerticalWandRecipe = {
+                null, new ItemStack(Material.DIAMOND_PICKAXE), null,
+                null, new ItemStack(Material.DIAMOND_HOE), null,
+                null, new ItemStack(Material.DIAMOND_SHOVEL), null
+        };
+        SlimefunItem VerticalWandItem = new SlimefunItem(RU_TOOLS, VerticalWand, RecipeType.ENHANCED_CRAFTING_TABLE, VerticalWandRecipe);
+        VerticalWandItem.register(this);
+        */
+        //HEHE// VW //
+        /*
+        SlimefunItemStack HorizontalWand = new SlimefunItemStack("HORIZONTAL_WAND", Material.BLAZE_ROD, "&6Horizontal Wand", "", "&bManual:", "&e&lRight Click to Place 1 Block Horizontally", "Places the same block you right clicked", "&eTakes blocks from your inventory");
+        ItemMeta HWMeta = HorizontalWand.getItemMeta();
+        // Add HWMeta lore
+        List<String> HWlore = new ArrayList<>(HWMeta.getLore());
+        HWlore.add("Experimental, WILL BREAK");
+        HWlore.add("I'm not fat!");
+        if (HWMeta != null) {
+            HWMeta.setLore(HWlore);
+            HorizontalWand.setItemMeta(HWMeta);
+        }
+        HorizontalWand.setItemMeta(HWMeta);
+        ItemStack[] HorizontalWandRecipe = {
+                null, null, null,
+                new ItemStack(Material.DIAMOND_PICKAXE), new ItemStack(Material.DIAMOND_HOE), new ItemStack(Material.DIAMOND_SHOVEL),
+                null, null, null
+        };
+        SlimefunItem HorizontalWandItem = new SlimefunItem(RU_TOOLS, HorizontalWand, RecipeType.ENHANCED_CRAFTING_TABLE, HorizontalWandRecipe);
+        HorizontalWandItem.register(this);
+        */
+
         //----------PANELS BELOW----------//
 
         // Template for future gens
@@ -784,6 +850,12 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register BarrierSwordSkillListener
         getServer().getPluginManager().registerEvents(new BarrierSwordSkillListener(this), this);
 
+        // Register the BlockDropFeature listener
+        getServer().getPluginManager().registerEvents(new BlockDropFeature(this), this);
+
+        // Register WandListeners
+        // getServer().getPluginManager().registerEvents(new VerticalWandListener(this), this);
+        // getServer().getPluginManager().registerEvents(new HorizontalWandListener(this), this);
 
     }
 
@@ -873,6 +945,66 @@ Blue eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV
         new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, sunflowerBundleRecipe).register(this);
         new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, peonyBundleRecipe).register(this);
         new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, roseBundleRecipe).register(this);
+
+
+        //GEO//
+            GEOResource jadeResource = new GemResource(jadeItem, "Jade");
+            GEOResource moonstoneResource = new GemResource(moonstoneItem, "Moonstone");
+            GEOResource onyxResource = new GemResource(onyxItem, "Onyx");
+            GEOResource rhodoniteResource = new GemResource(rhodoniteItem, "Rhodonite");
+            GEOResource amethystResource = new GemResource(amethystItem, "Amethyst");
+            GEOResource tanzaniteResource = new GemResource(tanzaniteItem, "Tanzanite");
+            GEOResource sapphireResource = new GemResource(sapphireItem, "Sapphire");
+            GEOResource kyaniteResource = new GemResource(kyaniteItem, "Kyanite");
+            GEOResource turquoiseResource = new GemResource(turquoiseItem, "Turquoise");
+            GEOResource emeraldResource = new GemResource(emeraldItem, "Emerald");
+            GEOResource peridotResource = new GemResource(peridotItem, "Peridot");
+            GEOResource topazResource = new GemResource(topazItem, "Topaz");
+            GEOResource citrineResource = new GemResource(citrineItem, "Citrine");
+            GEOResource garnetResource = new GemResource(garnetItem, "Garnet");
+
+    // Instantiate BuildWand
+        SlimefunItemStack buildWandItem = new SlimefunItemStack("BUILD_WAND", Material.BLAZE_ROD, "&bBuild Wand", "", "&7Max 128 blocks", "&e⚡ &7Rechargable");
+        ItemMeta BWMeta = buildWandItem.getItemMeta();
+        // Add BSlore
+        List<String> BWlore = new ArrayList<>(BWMeta.getLore());
+        BWlore.add("");
+        BWlore.add("Expect bugs lol");
+        if (BWMeta != null) {
+            BWMeta.setLore(BWlore);
+            buildWandItem.setItemMeta(BWMeta);
+        }
+        buildWandItem.setItemMeta(BWMeta);
+        ItemStack[] buildWandRecipe = {
+                new ItemStack(Material.STICK), new ItemStack(Material.BLAZE_ROD), new ItemStack(Material.STICK),
+                new ItemStack(Material.BLAZE_ROD), null, new ItemStack(Material.BLAZE_ROD),
+                new ItemStack(Material.STICK), new ItemStack(Material.BLAZE_ROD), new ItemStack(Material.STICK)
+        };
+        BuildWand buildWand = new BuildWand(this, RU_TOOLS, buildWandItem, RecipeType.ENHANCED_CRAFTING_TABLE, buildWandRecipe);
+        buildWand.register(this);
+
+
+///GEMS, WORKING CODE
+
+        SlimefunItemStack GemCluster = new SlimefunItemStack(
+                "GEM_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzRkNDJmOWM0NjFjZWUxOTk3YjY3YmYzNjEwYzY0MTFiZjg1MmI5ZTVkYjYwN2JiZjYyNjUyN2NmYjQyOTEyYyJ9fX0=", // Texture (URL)
+                "&6Gem Cluster", // Display name
+                new String[]{"&7Mixture of various gems"} // Description/lore
+        );
+        ItemStack[] GemClusterRecipe = new ItemStack[]{
+                null, Moonstone, null,
+                Jade, null, Jade,
+                null, Moonstone, null
+        };
+        SlimefunItem GemClusterItem = new SlimefunItem(
+                RU_MATERIALS, // Item group
+                GemCluster, // SlimefunItemStack
+                RecipeType.ENHANCED_CRAFTING_TABLE, // Recipe type
+                GemClusterRecipe // Recipe
+        );
+        GemClusterItem.register(this);
+
 
 
  */

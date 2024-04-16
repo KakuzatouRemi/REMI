@@ -1,6 +1,9 @@
 # Remilia's Utilities
 Intended for my server, and to those who want to try it
 
+# Gems
++ To obtain, mine Stone or Deepslate, has 12.5% chance to drop one of 14 gems
+
 # Tools
 + End Sword
   + Right click to teleport 12 blocks away
