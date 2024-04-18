@@ -729,7 +729,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         List<String> APHELore = new ArrayList<>(APHEMeta.getLore());
         APHELore.add("");
         APHELore.add("DO NOT USE INDOORS");
-        APHELore.add("DO NOT USE INDOORS");
         if (APHEMeta != null) {
             APHEMeta.setLore(APHELore);
             APHEMissile.setItemMeta(APHEMeta);
