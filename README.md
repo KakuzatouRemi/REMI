@@ -30,6 +30,12 @@ Intended for my server, and to those who want to try it
 + Barrier Sword
   + 15s Invulnerability 
   + 75s Cooldown
++ APHE Missile
+  + Up to 60 Damage on direct hit
+  + Consumable
+  + Very long range
+  + Doesn't break blocks (except it destroys item frames and armor stands)
+  + 10s Cooldown
     <br>
 # Generators
 + Lunisolar Panel I
@@ -44,7 +50,7 @@ Intended for my server, and to those who want to try it
 <br>
 
 Known issues: 
-+ Items are placeable, doesn't affect much
++ ~~Items are placeable, doesn't affect much~~ Fixed on V0.19
 + Tools incompatible with FoxyMachines' Improvement Forge & Core
 <br>
 <br>
