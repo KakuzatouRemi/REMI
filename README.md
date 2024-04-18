@@ -3,6 +3,7 @@ Intended for my server, and to those who want to try it
 
 # Gems
 + To obtain, mine Stone or Deepslate, has 12.5% chance to drop one of 14 gems
++ No use yet, keep tuned
 
 # Tools
 + End Sword
