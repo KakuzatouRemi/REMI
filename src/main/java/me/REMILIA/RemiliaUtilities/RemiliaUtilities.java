@@ -32,21 +32,6 @@ import org.bukkit.NamespacedKey;
 
 public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
-    private SlimefunItem jadeItem;
-    private SlimefunItem moonstoneItem;
-    private SlimefunItem onyxItem;
-    private SlimefunItem rhodoniteItem;
-    private SlimefunItem amethystItem;
-    private SlimefunItem tanzaniteItem;
-    private SlimefunItem sapphireItem;
-    private SlimefunItem kyaniteItem;
-    private SlimefunItem turquoiseItem;
-    private SlimefunItem emeraldItem;
-    private SlimefunItem peridotItem;
-    private SlimefunItem topazItem;
-    private SlimefunItem citrineItem;
-    private SlimefunItem garnetItem;
-
     @Override
     public void onEnable() {
         // Read something from your config.yml
@@ -731,48 +716,31 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem BarrierSwordItem = new SlimefunItem(RU_TOOLS, BarrierSword, RecipeType.ARMOR_FORGE, BarrierSwordRecipe);
         BarrierSwordItem.register(this);
 
-        //HEHE// VW //
-        /*
-        SlimefunItemStack VerticalWand = new SlimefunItemStack("VERTICAL_WAND", Material.BLAZE_ROD, "&6Vertical Wand", "", "&bManual:", "&e&lRight Click to Place 1 Block Upwards", "Places the same block you right clicked", "&eTakes blocks from your inventory");
-        ItemMeta VWMeta = VerticalWand.getItemMeta();
-        // Add VWMeta lore
-        List<String> VWlore = new ArrayList<>(VWMeta.getLore());
-        VWlore.add("Experimental, WILL BREAK");
-        VWlore.add("I'm not short!");
-        if (VWMeta != null) {
-            VWMeta.setLore(VWlore);
-            VerticalWand.setItemMeta(VWMeta);
+        //HEHE//
+
+        SlimefunItemStack APHEMissile = new SlimefunItemStack(
+                "APHE_MISSILE", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDg5ZGNjNTViNDhlMjcwODcyZDI4NTc2YTc5MDA1NTQwYmVkNWYwYWU1MzAxNWNmZGM5NWI3NTFkMTZmYTllMiJ9fX0=", // Material
+                "&6APHE Missile", // Display name
+                "", "&e&lRight Click to Fire", "&eATA / ATG Missile", "&cUse responsibly", "&eDoesn't break blocks, Build-Safe!" // Description/lore
+        );
+        ItemMeta APHEMeta = APHEMissile.getItemMeta();
+        // Add APHElore
+        List<String> APHELore = new ArrayList<>(APHEMeta.getLore());
+        APHELore.add("");
+        APHELore.add("DO NOT USE INDOORS");
+        APHELore.add("DO NOT USE INDOORS");
+        if (APHEMeta != null) {
+            APHEMeta.setLore(APHELore);
+            APHEMissile.setItemMeta(APHEMeta);
         }
-        VerticalWand.setItemMeta(VWMeta);
-        ItemStack[] VerticalWandRecipe = {
-                null, new ItemStack(Material.DIAMOND_PICKAXE), null,
-                null, new ItemStack(Material.DIAMOND_HOE), null,
-                null, new ItemStack(Material.DIAMOND_SHOVEL), null
-        };
-        SlimefunItem VerticalWandItem = new SlimefunItem(RU_TOOLS, VerticalWand, RecipeType.ENHANCED_CRAFTING_TABLE, VerticalWandRecipe);
-        VerticalWandItem.register(this);
-        */
-        //HEHE// VW //
-        /*
-        SlimefunItemStack HorizontalWand = new SlimefunItemStack("HORIZONTAL_WAND", Material.BLAZE_ROD, "&6Horizontal Wand", "", "&bManual:", "&e&lRight Click to Place 1 Block Horizontally", "Places the same block you right clicked", "&eTakes blocks from your inventory");
-        ItemMeta HWMeta = HorizontalWand.getItemMeta();
-        // Add HWMeta lore
-        List<String> HWlore = new ArrayList<>(HWMeta.getLore());
-        HWlore.add("Experimental, WILL BREAK");
-        HWlore.add("I'm not fat!");
-        if (HWMeta != null) {
-            HWMeta.setLore(HWlore);
-            HorizontalWand.setItemMeta(HWMeta);
-        }
-        HorizontalWand.setItemMeta(HWMeta);
-        ItemStack[] HorizontalWandRecipe = {
-                null, null, null,
-                new ItemStack(Material.DIAMOND_PICKAXE), new ItemStack(Material.DIAMOND_HOE), new ItemStack(Material.DIAMOND_SHOVEL),
-                null, null, null
-        };
-        SlimefunItem HorizontalWandItem = new SlimefunItem(RU_TOOLS, HorizontalWand, RecipeType.ENHANCED_CRAFTING_TABLE, HorizontalWandRecipe);
-        HorizontalWandItem.register(this);
-        */
+        ItemStack[] APHEMissileRecipe = {
+                APHE, APHE, APHE,
+                APHE, IceAccelerator, APHE,
+                APHE, APHE, APHE
+        }; // Recipe ingredients, change as needed
+        SlimefunItem APHEMissileItem = new SlimefunItem(RU_TOOLS, APHEMissile, RecipeType.ARMOR_FORGE, APHEMissileRecipe);
+        APHEMissileItem.register(this);
 
         //----------PANELS BELOW----------//
 
@@ -815,17 +783,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //----------MACHINES BELOW----------//
 
-        /*
-        SlimefunItemStack Rezinizer = new SlimefunItemStack("REZINIZER", Material.MAGENTA_STAINED_GLASS, "&5Rezinizer", "&7Hardens stuff");
-        ItemStack[] RezinizerRecipe = {
-                Binder, Binder, Binder,
-                SlimefunItems.ADVANCED_CIRCUIT_BOARD, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
-                Binder, SlimefunItems.SMALL_CAPACITOR, Binder
-        };
-        SlimefunItem RezinizerMachine = new SlimefunItem(RU_MACHINES, Rezinizer, RecipeType.ENHANCED_CRAFTING_TABLE, RezinizerRecipe);
-        RezinizerMachine.register(this);
-        */
-
         //HEHE//
 
         //----------ENCHANTS BELOW----------//
@@ -847,15 +804,17 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register the GlacialStaffListener as a listener
         getServer().getPluginManager().registerEvents(new GlacialStaffListener(this), this);
 
-        // Register BarrierSwordSkillListener
+        // Register BarrierSwordSkillListener as a listener
         getServer().getPluginManager().registerEvents(new BarrierSwordSkillListener(this), this);
 
-        // Register the BlockDropFeature listener
+        // Register the BlockDropFeature as a listener
         getServer().getPluginManager().registerEvents(new BlockDropFeature(this), this);
 
-        // Register WandListeners
-        // getServer().getPluginManager().registerEvents(new VerticalWandListener(this), this);
-        // getServer().getPluginManager().registerEvents(new HorizontalWandListener(this), this);
+        // Register the APHEMissileListener as a listener
+        getServer().getPluginManager().registerEvents(new APHEMissileListener(this), this);
+
+        // Register the UnplaceableItemPlacementListener as a listener
+        getServer().getPluginManager().registerEvents(new UnplaceableItemPlacementListener(), this);
 
     }
 
@@ -892,119 +851,3 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
     }
 
 }
-
-/*
-        <repository>
-            <id>slimefun-repo</id>
-            <url>https://repo.mrcookie Slimefun.me/content/groups/public/</url>
-        </repository>
-
-        <dependency>
-            <groupId>io.github.mooy1</groupId>
-            <artifactId>InfinityExpansion</artifactId>
-            <version>d995144</version>
-        </dependency>
-
-Purple eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3MTFmMTM5ZDNiY2E1NzdlYTdjZmMxYjhkODQ1OTRkYjg3ZGQwNjZkNmYwMGY3M2E5YWUzM2JjOWMyYWVkMSJ9fX0=
-Near Black eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzYyYjRmNTdkNDZiOGI3NTVhNzAzNTQwYmRkNTA0MDAzZmQ1M2Q0NDljNWVjNGY0NTBmYWE5NmFlMWIzZTdmZiJ9fX0=
-Pink eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc3MzJjYWViODhjY2U4ZDE4NTkzZGYwZmZhMzQzMzA1MzQxNzQxYmU2NDdhYWM0MmU0Y2U0ZDI1MDY3NTc2NSJ9fX0=
-Red eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ2OTI2OGUwNjQzZTY5NDY2NzM4ZDA0NThhZDlkOWI4MzI3ZWMxNGFlOWJjYTc5YTk5MGVhMjA3NzZhMmEyOCJ9fX0=
-Orange eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTNlOTY4NTE1ODllMWZhODU0ZjA0ODRjMzBkNjM0ZmE0Njc0MDk2NmE2NmMwOTllMWM2NDIxOWMxMWNiYTdhNSJ9fX0=
-White eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTc1YjU4NmQyOWFhNGY2MzAwNjcwN2ZiZTk0YTMzYzg5YzIyNWY0OWIzYjQ0Y2IxODE3Mzg2NTZjOTQyZTI3NyJ9fX0=
-Yellow eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2E3MTE0MjcwNmMwODRmNzBhOTVmYTk5NTU3MTZiYWYyNjgwYWI3Y2ZmMzc3MWM0MjdmNWIxMTZhZGY0M2JmYSJ9fX0=
-Blue eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2MyMmY2MTYwNjgzMjY1YjhmZWYxMTMzMTdjMThjZjQ0ZWRmMmEwNjZiNTZhOGM4ZmQzMjVmNmI5MjBhNWY4In19fQ==
-
-        //HEHE//
-
-        SlimefunItemStack RedstoneLapisCrystal = new SlimefunItemStack("REDSTONE_LAPIS_CRYSTAL", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFmNTE0NmM1NDIwMWRjYjc4ZjljYjE4ZjA5YWFlZGVkODM4OWE1NTc2ODZhZmE4NzNiNGIzYmViZjk3MDE1NCJ9fX0=", "&6Redstone-Lapis Crystal", new String[]{"&7Seed Crystal"});
-        ItemStack[] RedstoneLapisCrystalRecipe = new ItemStack[]{
-                LapisCrystal, RedstoneCrystal, LapisCrystal,
-                RedstoneCrystal, new ItemStack(Material.GLASS), RedstoneCrystal,
-                LapisCrystal, RedstoneCrystal, LapisCrystal
-        };
-        SlimefunItem RedstoneLapisCrystalItem = new SlimefunItem(RU_MATERIALS, RedstoneLapisCrystal, RecipeType.ENHANCED_CRAFTING_TABLE, RedstoneLapisCrystalRecipe);
-        RedstoneLapisCrystalItem.register(this);
-
-        //HEHE//
-
-        // Recipe ingredients
-        SlimefunItemStack lilacBundle = new SlimefunItemStack("LILAC_BUNDLE", Material.LILAC, "&dLilac Bundle", "&7Bundled Lilac");
-        SlimefunItemStack sunflowerBundle = new SlimefunItemStack("SUNFLOWER_BUNDLE", Material.SUNFLOWER, "&eSunflower Bundle", "&7Bundled Sunflower");
-        SlimefunItemStack peonyBundle = new SlimefunItemStack("PEONY_BUNDLE", Material.PEONY, "&dPeony Bundle", "&7Bundled Peony");
-        SlimefunItemStack roseBundle = new SlimefunItemStack("ROSE_BUNDLE", Material.ROSE_BUSH, "&cRose Bundle", "&7Bundled Rose");
-
-        // Recipes
-        ItemStack[] lilacBundleRecipe = {lilacBundle, null, null, null, null, null, null, null, null};
-        ItemStack[] sunflowerBundleRecipe = {sunflowerBundle, null, null, null, null, null, null, null, null};
-        ItemStack[] peonyBundleRecipe = {peonyBundle, null, null, null, null, null, null, null, null};
-        ItemStack[] roseBundleRecipe = {roseBundle, null, null, null, null, null, null, null, null};
-
-        // Create and register the Flower Furnace
-        SlimefunItemStack itemGroup = null;
-        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, lilacBundleRecipe).register(this);
-        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, sunflowerBundleRecipe).register(this);
-        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, peonyBundleRecipe).register(this);
-        new FlowerFurnace(itemGroup, RecipeType.ENHANCED_CRAFTING_TABLE, roseBundleRecipe).register(this);
-
-
-        //GEO//
-            GEOResource jadeResource = new GemResource(jadeItem, "Jade");
-            GEOResource moonstoneResource = new GemResource(moonstoneItem, "Moonstone");
-            GEOResource onyxResource = new GemResource(onyxItem, "Onyx");
-            GEOResource rhodoniteResource = new GemResource(rhodoniteItem, "Rhodonite");
-            GEOResource amethystResource = new GemResource(amethystItem, "Amethyst");
-            GEOResource tanzaniteResource = new GemResource(tanzaniteItem, "Tanzanite");
-            GEOResource sapphireResource = new GemResource(sapphireItem, "Sapphire");
-            GEOResource kyaniteResource = new GemResource(kyaniteItem, "Kyanite");
-            GEOResource turquoiseResource = new GemResource(turquoiseItem, "Turquoise");
-            GEOResource emeraldResource = new GemResource(emeraldItem, "Emerald");
-            GEOResource peridotResource = new GemResource(peridotItem, "Peridot");
-            GEOResource topazResource = new GemResource(topazItem, "Topaz");
-            GEOResource citrineResource = new GemResource(citrineItem, "Citrine");
-            GEOResource garnetResource = new GemResource(garnetItem, "Garnet");
-
-    // Instantiate BuildWand
-        SlimefunItemStack buildWandItem = new SlimefunItemStack("BUILD_WAND", Material.BLAZE_ROD, "&bBuild Wand", "", "&7Max 128 blocks", "&e⚡ &7Rechargable");
-        ItemMeta BWMeta = buildWandItem.getItemMeta();
-        // Add BSlore
-        List<String> BWlore = new ArrayList<>(BWMeta.getLore());
-        BWlore.add("");
-        BWlore.add("Expect bugs lol");
-        if (BWMeta != null) {
-            BWMeta.setLore(BWlore);
-            buildWandItem.setItemMeta(BWMeta);
-        }
-        buildWandItem.setItemMeta(BWMeta);
-        ItemStack[] buildWandRecipe = {
-                new ItemStack(Material.STICK), new ItemStack(Material.BLAZE_ROD), new ItemStack(Material.STICK),
-                new ItemStack(Material.BLAZE_ROD), null, new ItemStack(Material.BLAZE_ROD),
-                new ItemStack(Material.STICK), new ItemStack(Material.BLAZE_ROD), new ItemStack(Material.STICK)
-        };
-        BuildWand buildWand = new BuildWand(this, RU_TOOLS, buildWandItem, RecipeType.ENHANCED_CRAFTING_TABLE, buildWandRecipe);
-        buildWand.register(this);
-
-
-///GEMS, WORKING CODE
-
-        SlimefunItemStack GemCluster = new SlimefunItemStack(
-                "GEM_CLUSTER", // Item ID
-                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzRkNDJmOWM0NjFjZWUxOTk3YjY3YmYzNjEwYzY0MTFiZjg1MmI5ZTVkYjYwN2JiZjYyNjUyN2NmYjQyOTEyYyJ9fX0=", // Texture (URL)
-                "&6Gem Cluster", // Display name
-                new String[]{"&7Mixture of various gems"} // Description/lore
-        );
-        ItemStack[] GemClusterRecipe = new ItemStack[]{
-                null, Moonstone, null,
-                Jade, null, Jade,
-                null, Moonstone, null
-        };
-        SlimefunItem GemClusterItem = new SlimefunItem(
-                RU_MATERIALS, // Item group
-                GemCluster, // SlimefunItemStack
-                RecipeType.ENHANCED_CRAFTING_TABLE, // Recipe type
-                GemClusterRecipe // Recipe
-        );
-        GemClusterItem.register(this);
-
-
-
- */
