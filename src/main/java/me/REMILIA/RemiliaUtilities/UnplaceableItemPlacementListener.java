@@ -42,6 +42,7 @@ public class UnplaceableItemPlacementListener implements Listener {
                 displayName.contains("Unstable Pearl") ||
                 displayName.contains("Compressed Ice") ||
                 displayName.contains("Ice Accelerator") ||
+                displayName.contains("Linear Accelerator") ||
                 displayName.contains("Concentrated Explosives") ||
                 displayName.contains("APHE") ||
                 displayName.contains("Power Core") ||
@@ -63,6 +64,34 @@ public class UnplaceableItemPlacementListener implements Listener {
                 displayName.contains("Peridot") ||
                 displayName.contains("Topaz") ||
                 displayName.contains("Citrine") ||
-                displayName.contains("Garnet");
+                displayName.contains("Garnet")||
+                displayName.contains("Jade Cluster") ||
+                displayName.contains("Moonstone Cluster") ||
+                displayName.contains("Onyx Cluster") ||
+                displayName.contains("Rhodonite Cluster") ||
+                displayName.contains("Amethyst Cluster") ||
+                displayName.contains("Tanzanite Cluster") ||
+                displayName.contains("Sapphire Cluster") ||
+                displayName.contains("Kyanite Cluster") ||
+                displayName.contains("Turquoise Cluster") ||
+                displayName.contains("Emerald Cluster") ||
+                displayName.contains("Peridot Cluster") ||
+                displayName.contains("Topaz Cluster") ||
+                displayName.contains("Citrine Cluster") ||
+                displayName.contains("Garnet Cluster")||
+                displayName.contains("Jade Crystal") ||
+                displayName.contains("Moonstone Crystal") ||
+                displayName.contains("Onyx Crystal") ||
+                displayName.contains("Rhodonite Crystal") ||
+                displayName.contains("Amethyst Crystal") ||
+                displayName.contains("Tanzanite Crystal") ||
+                displayName.contains("Sapphire Crystal") ||
+                displayName.contains("Kyanite Crystal") ||
+                displayName.contains("Turquoise Crystal") ||
+                displayName.contains("Emerald Crystal") ||
+                displayName.contains("Peridot Crystal") ||
+                displayName.contains("Topaz Crystal") ||
+                displayName.contains("Citrine Crystal") ||
+                displayName.contains("Garnet Crystal");
     }
 }

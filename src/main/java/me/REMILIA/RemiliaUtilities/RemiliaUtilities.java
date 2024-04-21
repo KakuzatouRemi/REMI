@@ -282,6 +282,17 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem ActivatedObsidianItem = new SlimefunItem(RU_MATERIALS, ActivatedObsidian, RecipeType.ENHANCED_CRAFTING_TABLE, ActivatedObsidianRecipe);
         ActivatedObsidianItem.register(this);
 
+        //HEHE//
+
+        SlimefunItemStack LinearAccelerator = new SlimefunItemStack("LINEAR_ACCELERATOR", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWE0Nzg0Njk0MGFmOGFhZDIwNzM5MTg1MmFhMDI3N2EyZWUxMTY3OWZhMmMyODZlZjA2Mjc3NjU1ZjU0YTE1OCJ9fX0=", "&bLinear Accelerator", "&7Capable of handling high amounts of energy");
+        ItemStack[] LinearAcceleratorRecipe = {
+                IceAccelerator, IceAccelerator, IceAccelerator,
+                IceAccelerator, new ItemStack(Material.TINTED_GLASS), IceAccelerator,
+                IceAccelerator, IceAccelerator, IceAccelerator
+        };
+        SlimefunItem LinearAcceleratorItem = new SlimefunItem(RU_MATERIALS, LinearAccelerator, RecipeType.ENHANCED_CRAFTING_TABLE, LinearAcceleratorRecipe);
+        LinearAcceleratorItem.register(this);
+
 
         //HEHE//
 
@@ -339,7 +350,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem ProtectionCoreItem = new SlimefunItem(RU_MATERIALS, ProtectionCore, RecipeType.ENHANCED_CRAFTING_TABLE, ProtectionCoreRecipe);
         ProtectionCoreItem.register(this);
 
-        //OLD PLUGIN ITEMS, MERGE//
         //HEHE//
 
         SlimefunItemStack LapisCrystal = new SlimefunItemStack("LAPIS_CRYSTAL", "db9ffd85bf0283a588706e3d27afb9d4917e06f2ba717c1aea68dc79393b91f4", "&9Lapis Crystal", new String[]{"&9Crystallized Lapis Lazuli"});
@@ -372,6 +382,8 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         };
         SlimefunItem MagicalContainerItem = new SlimefunItem(RU_MATERIALS, MagicalContainer, RecipeType.ENHANCED_CRAFTING_TABLE, MagicalContainerRecipe);
         MagicalContainerItem.register(this);
+
+        //OLD PLUGIN ITEMS, MERGE//
 
         //HEHE//
 
@@ -430,7 +442,11 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem RoseBundleItem = new SlimefunItem(RU_MATERIALS, RoseBundle, RecipeType.COMPRESSOR, RoseBundleRecipe);
         RoseBundleItem.register(this);
 
-        //HEHE//
+        //END OF OLD ITEMS//
+
+        //----------GEMS BELOW----------//
+        //BASE//
+
         SlimefunItemStack Jade = new SlimefunItemStack(
                 "JADE", // Item ID
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM0ZjAwZWNiOTY3NzAyODBjOGQ2NTNjMTg5MGU4N2FiNWIxMjVmODUyOGU3YWQ0ZmVjMWQzMWViZDEyMjg3YiJ9fX0=", // Material (example, change as needed)
@@ -531,7 +547,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         ItemStack[] emeraldRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
         SlimefunItem emeraldItem = new SlimefunItem(RU_GEMS, Emerald, RecipeType.NULL, emeraldRecipe);
         emeraldItem.register(this);
-        SlimefunItemStack Reridot = new SlimefunItemStack(
+        SlimefunItemStack Peridot = new SlimefunItemStack(
                 "PERIDOT", // Item ID
                 "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWUxZDRlOWNlMWYxNjg0Nzg2OTI3ZTEwZjU5Zjk2ZDNhNTZjNzkyZThhOWIzYzVjNmE3NDU2OGU1Mjk3YjU2NSJ9fX0=", // Material (example, change as needed)
                 "&aPeridot", // Display name
@@ -539,7 +555,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&7Symbolizes strength and protection" // Additional lore
         );
         ItemStack[] peridotRecipe = {null, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
-        SlimefunItem peridotItem = new SlimefunItem(RU_GEMS, Reridot, RecipeType.NULL, peridotRecipe);
+        SlimefunItem peridotItem = new SlimefunItem(RU_GEMS, Peridot, RecipeType.NULL, peridotRecipe);
         peridotItem.register(this);
         SlimefunItemStack Topaz = new SlimefunItemStack(
                 "TOPAZ", // Item ID
@@ -573,8 +589,404 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         garnetItem.register(this);
 
         //HEHE//
+        //CLUSTERS//
 
-        //END OF OLD ITEMS//
+        SlimefunItemStack JadeCluster = new SlimefunItemStack(
+                "JADE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTEzMGU5YzRjZjY4NWE4MDU2NjNkZmY4YTNiNDMwNGFkMGE3MThmNzBhMWRjOGQwZGFlYzFlNTJhOGEzOGNiYSJ9fX0=", // Material (example, change as needed)
+                "&aJade Cluster", // Display name
+                "&7A cluster of beautiful green gemstones", // Description
+                "&7Found deep in the earth" // Additional lore
+        );
+        ItemStack[] jadeClusterRecipe = {new CustomItemStack(Jade, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem jadeClusterItem = new SlimefunItem(RU_GEMS, JadeCluster, RecipeType.COMPRESSOR, jadeClusterRecipe);
+        jadeClusterItem.register(this);
+        SlimefunItemStack MoonstoneCluster = new SlimefunItemStack(
+                "MOONSTONE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY4MGM2OTU0MDZlZWY0ZTA2ZWNmYzBkODg0ODhmNWZhMWY1ZDljYzRlNTg3NzJiZGQwMTg1NzZkZTU5MzBlMiJ9fX0=", // Material (example, change as needed)
+                "&7Moonstone Cluster", // Display name
+                "&fA cluster of mystical gemstones from the moon", // Description
+                "&7Said to possess powerful magical properties" // Additional lore
+        );
+        ItemStack[] moonstoneClusterRecipe = {new CustomItemStack(Moonstone, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem moonstoneClusterItem = new SlimefunItem(RU_GEMS, MoonstoneCluster, RecipeType.COMPRESSOR, moonstoneClusterRecipe);
+        moonstoneClusterItem.register(this);
+        SlimefunItemStack OnyxCluster = new SlimefunItemStack(
+                "ONYX_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVlNDQ0NDIyNjM5NTI3NzQzMjQ5ZDg2YzdmMTk0ZGQ2MDFiMzI0YzUzOGIxYzQxNmQ3ZjIzMzFiMWEzNzBmYiJ9fX0=", // Material (example, change as needed)
+                "&8Onyx Cluster", // Display name
+                "&7A cluster of dark, glossy gemstones", // Description
+                "&7Known for their combined protective properties" // Additional lore
+        );
+        ItemStack[] onyxClusterRecipe = {new CustomItemStack(Onyx, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem onyxClusterItem = new SlimefunItem(RU_GEMS, OnyxCluster, RecipeType.COMPRESSOR, onyxClusterRecipe);
+        onyxClusterItem.register(this);
+        SlimefunItemStack RhodoniteCluster = new SlimefunItemStack(
+                "RHODONITE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODUxNjhhMjA2ZDU3NzE3MmI5ZjZhZTk0OWM2YjFhZjM2ZWI5M2U1Mzk3ZmYyNDRkY2ZkZGJkNTljNDBmYzJlZCJ9fX0=", // Material (example, change as needed)
+                "&dRhodonite Cluster", // Display name
+                "&7A cluster of pink gemstones with black veins", // Description
+                "&7Believed to amplify the properties of individual stones" // Additional lore
+        );
+        ItemStack[] rhodoniteClusterRecipe = {new CustomItemStack(Rhodonite, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem rhodoniteClusterItem = new SlimefunItem(RU_GEMS, RhodoniteCluster, RecipeType.COMPRESSOR, rhodoniteClusterRecipe);
+        rhodoniteClusterItem.register(this);
+        SlimefunItemStack AmethystCluster = new SlimefunItemStack(
+                "AMETHYST_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZiYzU4ZGQ1ZDhhMDNkNTZhY2VkNGQwNDRhYTM5ZGM4MTU0OTZkNWViNDc0Y2JjZWYyNjk4NGFmNDkzOTFkIn19fQ==", // Material (example, change as needed)
+                "&5Amethyst Cluster", // Display name
+                "&7A cluster of purple gemstones emitting a soothing energy", // Description
+                "&7Known for their collective calming effect" // Additional lore
+        );
+        ItemStack[] amethystClusterRecipe = {new CustomItemStack(Amethyst, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem amethystClusterItem = new SlimefunItem(RU_GEMS, AmethystCluster, RecipeType.COMPRESSOR, amethystClusterRecipe);
+        amethystClusterItem.register(this);
+        SlimefunItemStack TanzaniteCluster = new SlimefunItemStack(
+                "TANZANITE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjZTk1N2Q4NDU3ZjhlMTAyYjhmOTJlOWE2ZDU2NDRhNWE5OWU3MDU3ZjQxOTY1ZjYxOTJiNTcyYzk3NGJhNyJ9fX0=", // Material (example, change as needed)
+                "&bTanzanite Cluster", // Display name
+                "&7A cluster of rare blue-violet gemstones", // Description
+                "&7Said to enhance spiritual awareness when grouped" // Additional lore
+        );
+        ItemStack[] tanzaniteClusterRecipe = {new CustomItemStack(Tanzanite, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem tanzaniteClusterItem = new SlimefunItem(RU_GEMS, TanzaniteCluster, RecipeType.COMPRESSOR, tanzaniteClusterRecipe);
+        tanzaniteClusterItem.register(this);
+        SlimefunItemStack SapphireCluster = new SlimefunItemStack(
+                "SAPPHIRE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVjNTE1ZGY3Zjc4MzFjZjkwMmY4OTAwOTFlNjUyNjk2OWVlYzM2NDBlZGM2ZThhNDRiYTZjNDA1YTkxNmQxMCJ9fX0=", // Material (example, change as needed)
+                "&9Sapphire Cluster", // Display name
+                "&7A cluster of precious blue gemstones", // Description
+                "&7Known for their collective wisdom and royalty" // Additional lore
+        );
+        ItemStack[] sapphireClusterRecipe = {new CustomItemStack(Sapphire, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem sapphireClusterItem = new SlimefunItem(RU_GEMS, SapphireCluster, RecipeType.COMPRESSOR, sapphireClusterRecipe);
+        sapphireClusterItem.register(this);
+        SlimefunItemStack KyaniteCluster = new SlimefunItemStack(
+                "KYANITE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q0MTU3ZWNjY2ZiYjhhNGM4YzkzYjZkZTIwNTJiOTgxNDA2M2RhMWZlNzQ2YWZjMTlkMGUyNzUyYzgyMWJlOCJ9fX0=", // Material (example, change as needed)
+                "&3Kyanite Cluster", // Display name
+                "&7A cluster of blue minerals often used in jewelry", // Description
+                "&7Known for their combined calming and balancing properties" // Additional lore
+        );
+        ItemStack[] kyaniteClusterRecipe = {new CustomItemStack(Kyanite, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem kyaniteClusterItem = new SlimefunItem(RU_GEMS, KyaniteCluster, RecipeType.COMPRESSOR, kyaniteClusterRecipe);
+        kyaniteClusterItem.register(this);
+        SlimefunItemStack TurquoiseCluster = new SlimefunItemStack(
+                "TURQUOISE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTliMzY4MWI4ZTdiNjBmMmJlMWEyNzYxNGQ3M2NkODczMmQwMWI5MmE2YjRjYTA1ZjZjZmVhY2RlMDExZTZkNSJ9fX0=", // Material (example, change as needed)
+                "&bTurquoise Cluster", // Display name
+                "&7A cluster of blue-green gemstones prized for their color", // Description
+                "&7Believed to amplify protection and good fortune when clustered" // Additional lore
+        );
+        ItemStack[] turquoiseClusterRecipe = {new CustomItemStack(Turquoise, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem turquoiseClusterItem = new SlimefunItem(RU_GEMS, TurquoiseCluster, RecipeType.COMPRESSOR, turquoiseClusterRecipe);
+        turquoiseClusterItem.register(this);
+        SlimefunItemStack EmeraldCluster = new SlimefunItemStack(
+                "EMERALD_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE5NWI0NTQ2ODA1NWJiMDIwZWY3NzZiNzE3OGU3OTFhZGFiNTEwNWFmYzI5ODgzOGVmY2QzMGY0ODViZDJjMyJ9fX0=", // Material (example, change as needed)
+                "&aEmerald Cluster", // Display name
+                "&7A cluster of rare green gemstones", // Description
+                "&7Valued for their collective beauty and rarity" // Additional lore
+        );
+        ItemStack[] emeraldClusterRecipe = {new CustomItemStack(Emerald, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem emeraldClusterItem = new SlimefunItem(RU_GEMS, EmeraldCluster, RecipeType.COMPRESSOR, emeraldClusterRecipe);
+        emeraldClusterItem.register(this);
+        SlimefunItemStack PeridotCluster = new SlimefunItemStack(
+                "PERIDOT_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDQwNWE0ZTQ1OTk5ODY1MThkNDhlYjZlMGIwZDI2N2IzNmQ0MTNhZjQ1NjVhM2YzZDA4ZTEyMmJjMjFlNGUxNCJ9fX0=", // Material (example, change as needed)
+                "&aPeridot Cluster", // Display name
+                "&7A cluster of green gemstones often found in volcanic areas", // Description
+                "&7Symbolizes collective strength and protection" // Additional lore
+        );
+        ItemStack[] peridotClusterRecipe = {new CustomItemStack(Peridot, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem peridotClusterItem = new SlimefunItem(RU_GEMS, PeridotCluster, RecipeType.COMPRESSOR, peridotClusterRecipe);
+        peridotClusterItem.register(this);
+        SlimefunItemStack TopazCluster = new SlimefunItemStack(
+                "TOPAZ_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFhOWZiZWE3M2YzYzZkZTExYmU2ZWE0YjM1Y2NlYTY1OTZkZTBiNDY4MmI0ZmE1YjFmYjM4NTZjMjU0YjYyMiJ9fX0=", // Material (example, change as needed)
+                "&eTopaz Cluster", // Display name
+                "&7A cluster of yellow gemstones associated with positivity", // Description
+                "&7Known for enhancing creativity and happiness when grouped" // Additional lore
+        );
+        ItemStack[] topazClusterRecipe = {new CustomItemStack(Topaz, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem topazClusterItem = new SlimefunItem(RU_GEMS, TopazCluster, RecipeType.COMPRESSOR, topazClusterRecipe);
+        topazClusterItem.register(this);
+        SlimefunItemStack CitrineCluster = new SlimefunItemStack(
+                "CITRINE_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFhNmQwOTQxMThiODY2NTRmYjlkMTU5OWQyMjc2MjhhNzFjY2Q3NDE3ZWFmNTUwYTY3OGM1NWRhYzY0OTJkZiJ9fX0=", // Material (example, change as needed)
+                "&6Citrine Cluster", // Display name
+                "&7A cluster of yellow-orange gemstones associated with abundance", // Description
+                "&7Believed to attract wealth and success when clustered" // Additional lore
+        );
+        ItemStack[] citrineClusterRecipe = {new CustomItemStack(Citrine, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem citrineClusterItem = new SlimefunItem(RU_GEMS, CitrineCluster, RecipeType.COMPRESSOR, citrineClusterRecipe);
+        citrineClusterItem.register(this);
+        SlimefunItemStack GarnetCluster = new SlimefunItemStack(
+                "GARNET_CLUSTER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzIyODYzMjRiNmIwNmMyZDRjMWQ4ZjgzYTliMTQwZDdjYWJkODI4MWRiOTcyYjI0M2QyZTYyZDFhMjNkMDA1NCJ9fX0=", // Material (example, change as needed)
+                "&cGarnet Cluster", // Display name
+                "&7A cluster of deep red gemstones symbolizing love and passion", // Description
+                "&7Known for their collective strength and energy" // Additional lore
+        );
+        ItemStack[] garnetClusterRecipe = {new CustomItemStack(Garnet, 8), null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem garnetClusterItem = new SlimefunItem(RU_GEMS, GarnetCluster, RecipeType.COMPRESSOR, garnetClusterRecipe);
+        garnetClusterItem.register(this);
+
+        //HEHE//
+        //CRYSTALS//////ADD SP. LORE//
+
+        SlimefunItemStack JadeCrystal = new SlimefunItemStack(
+                "JADE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM1NTAwYTM0OGIwMDY1MWU3ZmY1MWRiOTJhYmI2NDdhNmNjZTM3MzM5N2M0MWFhZmNiZDQwNGNhZjhmY2JmNiJ9fX0=", // Material (example, change as needed)
+                "&aJade Crystal", // Display name
+                "&7A refined beautiful green gemstone", // Description
+                "&7Found deep in the earth" // Additional lore
+        );
+        ItemMeta JCMeta = JadeCrystal.getItemMeta();
+// Add Jade Crystal lore
+        List<String> JClore = new ArrayList<>(JCMeta.getLore());
+        JClore.add("");
+        JClore.add("It's shining");
+// Update the lore
+        JCMeta.setLore(JClore);
+        JadeCrystal.setItemMeta(JCMeta);
+        ItemStack[] jadeCrystalRecipe = {JadeCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem jadeCrystalItem = new SlimefunItem(RU_GEMS, JadeCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, jadeCrystalRecipe);
+        jadeCrystalItem.register(this);
+        SlimefunItemStack MoonstoneCrystal = new SlimefunItemStack(
+                "MOONSTONE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhkYzIyZjZhZjUyOTQ5MTBiMmRiZjFjNzRkMDUwYWY3ZTVhY2ZiZDZhYWMwNjE0YzY5ZDYxNTJjMzFiZGY3OSJ9fX0=", // Material (example, change as needed)
+                "&7Moonstone Crystal", // Display name
+                "&fA refined mystical gemstone from the moon", // Description
+                "&7Said to possess powerful magical properties" // Additional lore
+        );
+        ItemMeta MCMeta = MoonstoneCrystal.getItemMeta();
+// Add Moonstone Crystal lore
+        List<String> MClore = new ArrayList<>(MCMeta.getLore());
+        MClore.add("");
+        MClore.add("It's shining");
+// Update the lore
+        MCMeta.setLore(MClore);
+        MoonstoneCrystal.setItemMeta(MCMeta);
+        ItemStack[] moonstoneCrystalRecipe = {MoonstoneCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem moonstoneCrystalItem = new SlimefunItem(RU_GEMS, MoonstoneCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, moonstoneCrystalRecipe);
+        moonstoneCrystalItem.register(this);
+        SlimefunItemStack OnyxCrystal = new SlimefunItemStack(
+                "ONYX_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY3MGE5ODk5N2I1ZGE2MDYyZjM1MTliMWZiZDBiZWQ3NzBjZjA3YzlmNjA4M2IzYWYxZTM3OWY5NTQ5M2I1OSJ9fX0=", // Material (example, change as needed)
+                "&8Onyx Crystal", // Display name
+                "&7A refined dark, glossy gemstone", // Description
+                "&7Known for its enhanced protective properties" // Additional lore
+        );
+        ItemMeta OCMeta = OnyxCrystal.getItemMeta();
+// Add Onyx Crystal lore
+        List<String> OClore = new ArrayList<>(OCMeta.getLore());
+        OClore.add("");
+        OClore.add("It's shining");
+// Update the lore
+        OCMeta.setLore(OClore);
+        OnyxCrystal.setItemMeta(OCMeta);
+        ItemStack[] onyxCrystalRecipe = {OnyxCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem onyxCrystalItem = new SlimefunItem(RU_GEMS, OnyxCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, onyxCrystalRecipe);
+        onyxCrystalItem.register(this);
+        SlimefunItemStack RhodoniteCrystal = new SlimefunItemStack(
+                "RHODONITE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmQxNTQxNDdhOWVlNWMwYTEwZmM0Y2I5OGNlODA2MzFiNGQyNjhlYjMwODgzMGM3NWEwODQzNDhjNmY0OTg0ZCJ9fX0=", // Material (example, change as needed)
+                "&dRhodonite Crystal", // Display name
+                "&7A refined pink gemstone with black veins", // Description
+                "&7Believed to possess heightened properties for promoting love and emotional healing" // Additional lore
+        );
+        ItemMeta RCMeta = RhodoniteCrystal.getItemMeta();
+// Add Rhodonite Crystal lore
+        List<String> RClore = new ArrayList<>(RCMeta.getLore());
+        RClore.add("");
+        RClore.add("It's shining");
+// Update the lore
+        RCMeta.setLore(RClore);
+        RhodoniteCrystal.setItemMeta(RCMeta);
+        ItemStack[] rhodoniteCrystalRecipe = {RhodoniteCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem rhodoniteCrystalItem = new SlimefunItem(RU_GEMS, RhodoniteCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, rhodoniteCrystalRecipe);
+        rhodoniteCrystalItem.register(this);
+        SlimefunItemStack AmethystCrystal = new SlimefunItemStack(
+                "AMETHYST_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjljODk5YzE0MzhjNGY4MTkyYTVjN2U2Yjc1OGZhYmE4ZmRkNTQ2MDRlZDg5YmY2MjI3YjZmY2MyYzc1YTQyMyJ9fX0=", // Material (example, change as needed)
+                "&5Amethyst Crystal", // Display name
+                "&7A refined purple gemstone with a soothing energy", // Description
+                "&7Enhanced with clarity and intuition properties" // Additional lore
+        );
+        ItemMeta ACMeta = AmethystCrystal.getItemMeta();
+// Add Amethyst Crystal lore
+        List<String> AClore = new ArrayList<>(ACMeta.getLore());
+        AClore.add("");
+        AClore.add("It's shining");
+// Update the lore
+        ACMeta.setLore(AClore);
+        AmethystCrystal.setItemMeta(ACMeta);
+        ItemStack[] amethystCrystalRecipe = {AmethystCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem amethystCrystalItem = new SlimefunItem(RU_GEMS, AmethystCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, amethystCrystalRecipe);
+        amethystCrystalItem.register(this);
+        SlimefunItemStack TanzaniteCrystal = new SlimefunItemStack(
+                "TANZANITE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y0MzFlOWM3Y2IwNTFhMDFlNmFhYjNmM2QwZGFjODczNmNhOGVhZjE1ZjY1NTQwY2ZhNzk5NWExZTI0MWY1NSJ9fX0=", // Material (example, change as needed)
+                "&bTanzanite Crystal", // Display name
+                "&7A rare refined blue-violet gemstone", // Description
+                "&7Enhanced with mystical properties" // Additional lore
+        );
+        ItemMeta TCMeta = TanzaniteCrystal.getItemMeta();
+// Add Tanzanite Crystal lore
+        List<String> TClore = new ArrayList<>(TCMeta.getLore());
+        TClore.add("");
+        TClore.add("It's shining");
+// Update the lore
+        TCMeta.setLore(TClore);
+        TanzaniteCrystal.setItemMeta(TCMeta);
+        ItemStack[] tanzaniteCrystalRecipe = {TanzaniteCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem tanzaniteCrystalItem = new SlimefunItem(RU_GEMS, TanzaniteCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, tanzaniteCrystalRecipe);
+        tanzaniteCrystalItem.register(this);
+        SlimefunItemStack SapphireCrystal = new SlimefunItemStack(
+                "SAPPHIRE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhmOWYzY2VkNzE2Yzc5MGQ1MjQ1ZDRjZDllMmI3NjZhNTU3NjU0MmE4OGQ1YjE0NGFlMWQ3YjA0MjYwMzc4YSJ9fX0=", // Material (example, change as needed)
+                "&9Sapphire Crystal", // Display name
+                "&7A precious refined blue gemstone", // Description
+                "&7Infused with ancient wisdom and power" // Additional lore
+        );
+        ItemMeta SCMeta = SapphireCrystal.getItemMeta();
+// Add Sapphire Crystal lore
+        List<String> SClore = new ArrayList<>(SCMeta.getLore());
+        SClore.add("");
+        SClore.add("It's shining");
+// Update the lore
+        SCMeta.setLore(SClore);
+        SapphireCrystal.setItemMeta(SCMeta);
+        ItemStack[] sapphireCrystalRecipe = {SapphireCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem sapphireCrystalItem = new SlimefunItem(RU_GEMS, SapphireCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, sapphireCrystalRecipe);
+        sapphireCrystalItem.register(this);
+        SlimefunItemStack KyaniteCrystal = new SlimefunItemStack(
+                "KYANITE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDRmYzM4MDIyZDc1YjYwMTBiNDZkYTg1MTg2MGJlN2ViMmQ0YjAzNTQ5MDU3NDdkMTIyYTUyMTBkMDE3ZDI3OCJ9fX0=", // Material (example, change as needed)
+                "&3Kyanite Crystal", // Display name
+                "&7A refined blue mineral of exceptional clarity", // Description
+                "&7Radiates tranquility and balance" // Additional lore
+        );
+        ItemMeta KCMeta = KyaniteCrystal.getItemMeta();
+// Add Kyanite Crystal lore
+        List<String> KClore = new ArrayList<>(KCMeta.getLore());
+        KClore.add("");
+        KClore.add("It's shining");
+// Update the lore
+        KCMeta.setLore(KClore);
+        KyaniteCrystal.setItemMeta(KCMeta);
+        ItemStack[] kyaniteCrystalRecipe = {KyaniteCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem kyaniteCrystalItem = new SlimefunItem(RU_GEMS, KyaniteCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, kyaniteCrystalRecipe);
+        kyaniteCrystalItem.register(this);
+        SlimefunItemStack TurquoiseCrystal = new SlimefunItemStack(
+                "TURQUOISE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZhOWE2Y2NiOTZiYWMwZDAyMGQyODQ2MTQ5YTFiZjg5OGM2MTgzMTQ0MjZhNTA4Y2M2YzY1YTRlNTc2OTVmNiJ9fX0=", // Material (example, change as needed)
+                "&bTurquoise Crystal", // Display name
+                "&7A refined blue-green gemstone prized for its color", // Description
+                "&7Brings protection and good fortune to its bearer" // Additional lore
+        );
+        ItemMeta TqCMeta = TurquoiseCrystal.getItemMeta();
+// Add Turquoise Crystal lore
+        List<String> TqClore = new ArrayList<>(TqCMeta.getLore());
+        TqClore.add("");
+        TqClore.add("It's shining");
+// Update the lore
+        TqCMeta.setLore(TqClore);
+        TurquoiseCrystal.setItemMeta(TqCMeta);
+        ItemStack[] turquoiseCrystalRecipe = {TurquoiseCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem turquoiseCrystalItem = new SlimefunItem(RU_GEMS, TurquoiseCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, turquoiseCrystalRecipe);
+        turquoiseCrystalItem.register(this);
+        SlimefunItemStack EmeraldCrystal = new SlimefunItemStack(
+                "EMERALD_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWI0ZTNmNjc4ZGI5OWVmOGVmODYwNWU5NjdkYmNhZDBlODNiYzJlM2M1NDIyMTQxNDliZDEzMTYzMmE3MjE1YSJ9fX0=", // Material (example, change as needed)
+                "&aEmerald Crystal", // Display name
+                "&7A refined rare green gemstone valued for its beauty and rarity", // Description
+                "&7Brings prosperity and harmony to its possessor" // Additional lore
+        );
+        ItemMeta ECMeta = EmeraldCrystal.getItemMeta();
+// Add Emerald Crystal lore
+        List<String> ECllore = new ArrayList<>(ECMeta.getLore());
+        ECllore.add("");
+        ECllore.add("It's shining");
+// Update the lore
+        ECMeta.setLore(ECllore);
+        EmeraldCrystal.setItemMeta(ECMeta);
+        ItemStack[] emeraldCrystalRecipe = {EmeraldCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem emeraldCrystalItem = new SlimefunItem(RU_GEMS, EmeraldCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, emeraldCrystalRecipe);
+        emeraldCrystalItem.register(this);
+        SlimefunItemStack PeridotCrystal = new SlimefunItemStack(
+                "PERIDOT_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTMzNzBjYzkzZTYzZGU3MzljMTcyNzZiNzY3ZDBhNDAyYjM5NDFmM2ExZDBjZGFmN2M5NzM1MzhhYWMzNjM4MiJ9fX0=", // Material (example, change as needed)
+                "&aPeridot Crystal", // Display name
+                "&7A refined green gemstone often found in volcanic areas", // Description
+                "&7Symbolizes strength and protection, brings luck and prosperity" // Additional lore
+        );
+        ItemMeta PCMeta = PeridotCrystal.getItemMeta();
+// Add Peridot Crystal lore
+        List<String> PCllore = new ArrayList<>(PCMeta.getLore());
+        PCllore.add("");
+        PCllore.add("It's shining");
+// Update the lore
+        PCMeta.setLore(PCllore);
+        PeridotCrystal.setItemMeta(PCMeta);
+        ItemStack[] peridotCrystalRecipe = {PeridotCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem peridotCrystalItem = new SlimefunItem(RU_GEMS, PeridotCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, peridotCrystalRecipe);
+        peridotCrystalItem.register(this);
+        SlimefunItemStack TopazCrystal = new SlimefunItemStack(
+                "TOPAZ_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTA2ODYyZjE1NGVjODliYWZjMjE0ZDQ0MmJkOGNmMzYwZmFmZjNlNTg2MDMzMDdiMTE4YTE2Mjc2NzI2OGE2In19fQ==", // Material (example, change as needed)
+                "&eTopaz Crystal", // Display name
+                "&7A refined yellow gemstone associated with positivity", // Description
+                "&7Thought to promote creativity and happiness" // Additional lore
+        );
+        ItemMeta TpCMeta = TopazCrystal.getItemMeta();
+// Add Topaz Crystal lore
+        List<String> TpClore = new ArrayList<>(TpCMeta.getLore());
+        TpClore.add("");
+        TpClore.add("It's shining");
+// Update the lore
+        TpCMeta.setLore(TpClore);
+        TopazCrystal.setItemMeta(TpCMeta);
+        ItemStack[] topazCrystalRecipe = {TopazCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem topazCrystalItem = new SlimefunItem(RU_GEMS, TopazCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, topazCrystalRecipe);
+        topazCrystalItem.register(this);
+        SlimefunItemStack CitrineCrystal = new SlimefunItemStack(
+                "CITRINE_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhNjRjOGZhZjU1MzFjYjM2ZGEzMDMxMzhiYTc4MTM5ZDE3YzllMzUyM2UxNTZjNzFkMGY2OWRiM2Y1MjljYiJ9fX0=", // Material (example, change as needed)
+                "&6Citrine Crystal", // Display name
+                "&7A refined yellow-orange gemstone associated with abundance", // Description
+                "&7Believed to attract wealth and success" // Additional lore
+        );
+        ItemMeta CCMeta = CitrineCrystal.getItemMeta();
+// Add Citrine Crystal lore
+        List<String> CClore = new ArrayList<>(CCMeta.getLore());
+        CClore.add("");
+        CClore.add("It's shining");
+// Update the lore
+        CCMeta.setLore(CClore);
+        CitrineCrystal.setItemMeta(CCMeta);
+        ItemStack[] citrineCrystalRecipe = {CitrineCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem citrineCrystalItem = new SlimefunItem(RU_GEMS, CitrineCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, citrineCrystalRecipe);
+        citrineCrystalItem.register(this);
+        SlimefunItemStack GarnetCrystal = new SlimefunItemStack(
+                "GARNET_CRYSTAL", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2I4MTIxMTZiZmY0ZGNkYzdjZDg1ZDY3Nzk5NzRjZWU3YTM2ODA0NjFmYmZlZGQ1ZTk3MWE4ZmI2MTJlZmFkIn19fQ==", // Material (example, change as needed)
+                "&cGarnet Crystal", // Display name
+                "&7A refined deep red gemstone symbolizing love and passion", // Description
+                "&7Associated with strength and energy" // Additional lore
+        );
+        ItemMeta GCMeta = GarnetCrystal.getItemMeta();
+// Add Garnet Crystal lore
+        List<String> GClore = new ArrayList<>(GCMeta.getLore());
+        GClore.add("");
+        GClore.add("It's shining");
+// Update the lore
+        GCMeta.setLore(GClore);
+        GarnetCrystal.setItemMeta(GCMeta);
+        ItemStack[] garnetCrystalRecipe = {GarnetCluster, null, null, null, null, null, null, null, null}; // Recipe ingredients, change as needed
+        SlimefunItem garnetCrystalItem = new SlimefunItem(RU_GEMS, GarnetCrystal, RecipeType.HEATED_PRESSURE_CHAMBER, garnetCrystalRecipe);
+        garnetCrystalItem.register(this);
 
         //----------TOOLS BELOW----------//
 
@@ -671,7 +1083,7 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        SlimefunItemStack GlacialStaff = new SlimefunItemStack("GLACIAL_STAFF", Material.IRON_HOE, "&bGlacial Staff", "", "&e&lRight Click to Cast", "&e&lLeft Click to Change Mode", "&eSynthesizes energy itself", "&cPierces through Shields", "&cSplash damage", "&bPortable fire extinguisher");
+        SlimefunItemStack GlacialStaff = new SlimefunItemStack("GLACIAL_STAFF", Material.IRON_HOE, "&bGlacial Staff", "", "&e&lRight Click to Cast", "&eSynthesizes energy itself", "&cPierces through Shields", "&cSplash damage", "&bPortable fire extinguisher");
         ItemMeta GSmeta = GlacialStaff.getItemMeta();
         if (GSmeta != null) {
             // Enchants
@@ -738,8 +1150,40 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 APHE, IceAccelerator, APHE,
                 APHE, APHE, APHE
         }; // Recipe ingredients, change as needed
-        SlimefunItem APHEMissileItem = new SlimefunItem(RU_TOOLS, APHEMissile, RecipeType.ARMOR_FORGE, APHEMissileRecipe);
+        SlimefunItem APHEMissileItem = new SlimefunItem(RU_TOOLS, APHEMissile, RecipeType.ENHANCED_CRAFTING_TABLE, APHEMissileRecipe);
         APHEMissileItem.register(this);
+
+        //HEHE//
+
+        SlimefunItemStack CrystalBlaster = new SlimefunItemStack(
+                "CRYSTAL_BLASTER", // Item ID
+                Material.DIAMOND_HOE, // Material
+                "&bCrystal Blaster", // Display name
+                "", // Empty lore
+                "&e&lRight Click to Shoot", // Description
+                "&eHarness the power of crystals", // Additional lore
+                "&cMid-range" // Additional lore
+        );
+        ItemMeta CBMeta = CrystalBlaster.getItemMeta();
+        if (CBMeta != null) {
+            List<String> CBlore = new ArrayList<>(CBMeta.getLore());
+            CBlore.add("");
+            CBlore.add("This ain't Pixel Gun!");
+            CBMeta.setLore(CBlore);
+            CrystalBlaster.setItemMeta(CBMeta);
+        }
+        ItemStack[] crystalBlasterRecipe = {
+                new ItemStack(Material.PISTON), LinearAccelerator, LinearAccelerator,
+                MagicalContainer, ReinforcedHandle, new ItemStack(Material.SPYGLASS),
+                ReinforcedHandle, ReinforcedHandle, new ItemStack(Material.ARMOR_STAND)
+        };
+        SlimefunItem crystalBlasterItem = new SlimefunItem(
+                RU_TOOLS, // Category
+                CrystalBlaster, // Item
+                RecipeType.ARMOR_FORGE, // Recipe type
+                crystalBlasterRecipe // Recipe
+        );
+        crystalBlasterItem.register(this);
 
         //----------PANELS BELOW----------//
 
@@ -815,6 +1259,10 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register the UnplaceableItemPlacementListener as a listener
         getServer().getPluginManager().registerEvents(new UnplaceableItemPlacementListener(), this);
 
+        // Registering the CrystalBlasterListener as a listener
+        getServer().getPluginManager().registerEvents(new CrystalBlasterListener(this), this);
+
+
     }
 
 
@@ -850,3 +1298,47 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
     }
 
 }
+
+/*
+MC Server IPs
+Java IPs
+rules-story.gl.at.ply.gg:64745
+147.185.221.16:64745
+
+Bedrock IPs
+etc-cry.gl.at.ply.gg:9285
+147.185.221.16:9285
+
+Nkahost sa pc ko nakakabit sa router
+ */
+
+//testing plugin...
+
+/*
+
+//MISSILE LAUNCHER
+//MAKE NEW MATERIALS
+SlimefunItemStack MissileLauncher = new SlimefunItemStack(
+        "MISSILE_LAUNCHER", // Item ID
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDg5ZGNjNTViNDhlMjcwODcyZDI4NTc2YTc5MDA1NTQwYmVkNWYwYWU1MzAxNWNmZGM5NWI3NTFkMTZmYTllMiJ9fX0=", // Material
+        "&6Missile Launcher", // Display name
+        "", "&e&lRight Click to Fire", "&eUses APHE Missiles", "&cUse responsibly", "Faster ROF than manual" // Description/lore
+);
+ItemMeta MLMeta = MissileLauncher.getItemMeta();
+// Add APHElore
+List<String> MLLore = new ArrayList<>(MLMeta.getLore());
+        MLLore.add("");
+        MLLore.add("hehe");
+        if (MLMeta != null) {
+        MLMeta.setLore(MLLore);
+            MissileLauncher.setItemMeta(MLMeta);
+        }
+ItemStack[] MissileLauncherRecipe = {
+        null, null, null,
+        null, null, null,
+        null, null, null
+}; // Recipe ingredients, change as needed
+SlimefunItem MissileLauncherItem = new SlimefunItem(RU_TOOLS, MissileLauncher, RecipeType.NULL, MissileLauncherRecipe);
+        MissileLauncherItem.register(this);
+
+        */
