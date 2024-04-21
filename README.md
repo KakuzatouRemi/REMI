@@ -40,6 +40,7 @@ Intended for my server, and to those who want to try it
   + 10s Cooldown
 + Crystal Blaster
   + Very long range
+  + 4x projectile speed
   + Consumes crystals
     <br>
 # Generators
