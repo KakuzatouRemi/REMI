@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Added APHE Missile, made materials/items/tools unplaceable, as they should be">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.19-Alpha.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713454919488</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster">
+      <option name="closed" value="true" />
+      <created>1713716959521</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713716959521</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +312,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="Added Block Drops, Gems can now be obtained.&#10;Added a separate category for gems" />
     <MESSAGE value="Added APHE Missile, made materials/items/tools unplaceable, as they should be" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added APHE Missile, made materials/items/tools unplaceable, as they should be" />
+    <MESSAGE value="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
