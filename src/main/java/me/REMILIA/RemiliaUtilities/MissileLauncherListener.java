@@ -88,7 +88,7 @@ public class MissileLauncherListener implements Listener {
     }
 
     private boolean isValidMissileLauncher(ItemStack item) {
-        return item != null && item.getItemMeta() != null && item.getItemMeta().hasLore() && item.getItemMeta().getLore() != null && item.getItemMeta().getLore().contains("DO NOT USE INDOORS");
+        return item != null && item.getItemMeta() != null && item.getItemMeta().hasLore() && item.getItemMeta().getLore() != null && item.getItemMeta().getLore().contains("FREEEEBIRD!!!");
     }
 
     private boolean hasAPHEMissile(Player player) {
@@ -103,7 +103,7 @@ public class MissileLauncherListener implements Listener {
 
     private void consumeAPHEMissile(Player player) {
         for (ItemStack itemStack : player.getInventory().getContents()) {
-            if (itemStack != null && itemStack.getItemMeta() != null && itemStack.getItemMeta().hasLore() && Objects.requireNonNull(itemStack.getItemMeta().getLore()).contains("FREEEEBIRD!!!")) {
+            if (itemStack != null && itemStack.getItemMeta() != null && itemStack.getItemMeta().hasLore() && Objects.requireNonNull(itemStack.getItemMeta().getLore()).contains("DO NOT USE INDOORS")) {
                 int amount = itemStack.getAmount();
                 if (amount > 1) {
                     itemStack.setAmount(amount - 1);

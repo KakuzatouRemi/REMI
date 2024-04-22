@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/MissileLauncherListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
-    </list>
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Continuation~&#10;Added Missile Launcher (not yet working)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +290,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713798228611</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Continuation~&#10;Added Missile Launcher">
+      <option name="closed" value="true" />
+      <created>1713799784420</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713799784421</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Continuation~&#10;Added Missile Launcher (not yet working)">
+      <option name="closed" value="true" />
+      <created>1713799980080</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713799980080</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Continuation~&#10;Added Missile Launcher (not yet working)">
+      <option name="closed" value="true" />
+      <created>1713800114108</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713800114108</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +345,9 @@
     <MESSAGE value="Added APHE Missile, made materials/items/tools unplaceable, as they should be" />
     <MESSAGE value="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster" />
     <MESSAGE value="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper" />
+    <MESSAGE value="Continuation~&#10;Added Missile Launcher" />
+    <MESSAGE value="Continuation~&#10;Added Missile Launcher (not yet working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continuation~&#10;Added Missile Launcher (not yet working)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

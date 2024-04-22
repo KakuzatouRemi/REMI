@@ -1293,6 +1293,9 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register the APHEMissileListener as a listener
         getServer().getPluginManager().registerEvents(new APHEMissileListener(this), this);
 
+        // Register the MissileLauncherListener as a listener
+        getServer().getPluginManager().registerEvents(new MissileLauncherListener(this), this);
+
         // Register the UnplaceableItemPlacementListener as a listener
         getServer().getPluginManager().registerEvents(new UnplaceableItemPlacementListener(), this);
 
