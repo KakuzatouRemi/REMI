@@ -2,9 +2,9 @@
 Intended for my server, and to those who want to try it
 
 # Gems
-+ To obtain, mine Stone or Deepslate, has 12.5% chance to drop one of 14 gems
-+ Use 8 to craft the cluster variant
-+ Put the cluster variant in Heated Pressure Chamber to make the crystal variant (Ammo for Crystal Blaster)
++ Base variant, to obtain, mine Stone or Deepslate, has 12.5% chance to drop one of 14 gems
++ Cluster variant, use 8 base gems to craft in Compressor
++ Crystal variant, Put the gem cluster in Heated Pressure Chamber to make the crystal variant (Ammo for Crystal Blaster)
 
 # Tools
 + End Sword
@@ -40,6 +40,7 @@ Intended for my server, and to those who want to try it
   + 10s Cooldown
 + Crystal Blaster
   + Very long range
+  + 4x projectile speed
   + Consumes crystals
     <br>
 # Generators
