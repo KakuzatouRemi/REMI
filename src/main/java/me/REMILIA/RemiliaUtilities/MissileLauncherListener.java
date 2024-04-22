@@ -44,7 +44,7 @@ public class MissileLauncherListener implements Listener {
                     long remainingCooldown = cooldownDuration - timeSinceLastCast;
                     long remainingCooldownSeconds = remainingCooldown / 1000;
 
-                    player.sendMessage("The Missile Launcher is on cooldown. Remaining cooldown: " + remainingCooldownSeconds + " seconds.");
+                    player.sendMessage("Missile Launcher is on cooldown. Remaining cooldown: " + remainingCooldownSeconds + " seconds.");
                     return;
                 }
 
