@@ -1201,7 +1201,6 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
                 "&bCrystal Sniper", // Display name
                 "", // Empty lore
                 "&e&lLeft Click to Shoot", // Description
-                "&e&lRight Click to Zoom", // Additional lore
                 "&dHarness the power of crystals", // Additional lore
                 "&eVery long range", // Additional lore
                 "&e6s cooldown" // Additional lore

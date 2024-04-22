@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" afterDir="false" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Continuation~&#10;Removed zoom, interferes with sniper projectile range">
+      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.21-Alpha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RemiliaUtilities v0.21-Alpha.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalSniperListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalSniperListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalSniperListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalSniperListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +351,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713801593689</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
+      <option name="closed" value="true" />
+      <created>1713801818210</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713801818210</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Continuation~&#10;Removed zoom, interferes with sniper projectile range">
+      <option name="closed" value="true" />
+      <created>1713802154626</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713802154626</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,7 +401,8 @@
     <MESSAGE value="Continuation~&#10;Added Missile Launcher" />
     <MESSAGE value="Continuation~&#10;Added Missile Launcher (not yet working)" />
     <MESSAGE value="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener" />
+    <MESSAGE value="Continuation~&#10;Removed zoom, interferes with sniper projectile range" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continuation~&#10;Removed zoom, interferes with sniper projectile range" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

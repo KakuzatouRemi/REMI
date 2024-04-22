@@ -1,4 +1,4 @@
-package me.REMILIA.RemiliaUtilities; //cant go through plants
+package me.REMILIA.RemiliaUtilities;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -23,7 +23,6 @@ public class CrystalSniperListener implements Listener {
 
     private final JavaPlugin plugin;
     private final HashMap<Player, Long> cooldowns = new HashMap<>();
-    private final HashMap<Player, Boolean> isZooming = new HashMap<>();
 
     public CrystalSniperListener(RemiliaUtilities plugin) {
         this.plugin = plugin;
@@ -40,11 +39,6 @@ public class CrystalSniperListener implements Listener {
             if (event.getAction().toString().contains("LEFT")) {
                 // Fire the crystal blaster
                 fireCrystalSniper(player);
-            }
-            // Check if the player is trying to right-click (zoom)
-            else if (event.getAction().toString().contains("RIGHT")) {
-                // Toggle zooming
-                toggleZoom(player);
             }
         }
     }
@@ -105,28 +99,11 @@ public class CrystalSniperListener implements Listener {
                 // Set cooldown
                 cooldowns.put(player, System.currentTimeMillis());
             } else {
-                player.sendMessage("You need crystals to use the Crystal Blaster!");
+                player.sendMessage("You need crystals to use the Crystal Sniper!");
             }
         } else {
             long timeLeft = (cooldowns.get(player) + COOLDOWN_TIME - System.currentTimeMillis()) / 1000;
-            player.sendMessage("Crystal Blaster is on cooldown. Time left: " + timeLeft + " seconds.");
-        }
-    }
-
-
-
-    private void toggleZoom(Player player) {
-        if (!isZooming.containsKey(player)) {
-            isZooming.put(player, false);
-        }
-        boolean zoomState = !isZooming.get(player);
-        isZooming.put(player, zoomState);
-
-        // Apply or remove zoom effect
-        if (zoomState) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Integer.MAX_VALUE, 1));
-        } else {
-            player.removePotionEffect(PotionEffectType.SLOW);
+            player.sendMessage("Crystal Sniper is on cooldown. Time left: " + timeLeft + " seconds.");
         }
     }
 
