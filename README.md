@@ -15,15 +15,19 @@ Intended for my server, and to those who want to try it
   + 5 Second Cooldown
 + Ice Blaster
   + Right click to shoot
+  + 8 Damage
   + Uses Normal/Packed/Blue Ice as ammo
+  + Range 20~30 blocks
 + Icicle Staff
   + Right click to shoot
   + Needs at least one Ice in inventory
+  + 10 Damage
   + 1.2x faster projectile
   + Range 30~40 blocks
 + Glacial Staff
   + Right click to shoot
   + No need for Ice
+  + 15 Damage
   + 1.4x faster projectile
   + Splash Damage / AOE, 3 block radius around point of impact
   + 0.6s Cooldown
@@ -44,6 +48,7 @@ Intended for my server, and to those who want to try it
   + 3s Cooldown (Faster ROF)
 + Crystal Sniper
   + Very long range
+  + 20 Damage
   + 4x projectile speed
   + Consumes crystals
     <br>
@@ -60,7 +65,7 @@ Intended for my server, and to those who want to try it
 <br>
 
 Known issues: 
-+ ~~Items are placeable, doesn't affect much~~ Fixed on V0.19
++ ~~Items are placeable, doesn't affect much~~ Fixed on V0.19, Improved on V0.21
 + Tools incompatible with FoxyMachines' Improvement Forge & Core
 <br>
 <br>
