@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Continuation~&#10;Added Missile Launcher (not yet working)" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/UnplaceableItemPlacementListener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -314,7 +316,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713800114108</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Continuation~&#10;Added Missile Launcher (not yet working)">
+      <option name="closed" value="true" />
+      <created>1713800419090</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713800419090</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
+      <option name="closed" value="true" />
+      <created>1713801185881</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713801185881</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
+      <option name="closed" value="true" />
+      <created>1713801587673</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713801587673</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener">
+      <option name="closed" value="true" />
+      <created>1713801593689</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1713801593689</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +381,8 @@
     <MESSAGE value="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper" />
     <MESSAGE value="Continuation~&#10;Added Missile Launcher" />
     <MESSAGE value="Continuation~&#10;Added Missile Launcher (not yet working)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuation~&#10;Added Missile Launcher (not yet working)" />
+    <MESSAGE value="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continuation~&#10;Missile launcher works now&#10;Optimized UnplaceableItemPlacementListener" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

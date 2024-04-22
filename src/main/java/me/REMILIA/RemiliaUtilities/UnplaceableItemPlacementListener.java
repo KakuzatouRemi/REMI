@@ -1,97 +1,52 @@
 package me.REMILIA.RemiliaUtilities;
 
+import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-
-import java.util.Objects;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class UnplaceableItemPlacementListener implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         ItemStack item = event.getItem();
-        // Check if the item being interacted with is unplaceable
-        if (isUnplaceableItem(item)) {
-            // Cancel the event to prevent placement
-            event.setCancelled(true);
+        if (item != null) {
+            if (!isUnplaceableItem(item)) {
+                // Allow placement if the item is not unplaceable
+                return;
+            }
+            // Cancel placement if the item is a player head
+            if (item.getType() == Material.PLAYER_HEAD) {
+                event.setCancelled(true);
+            }
         }
     }
 
-    // Method to check if the item is unplaceable
     private boolean isUnplaceableItem(ItemStack item) {
-        if (item == null || !item.hasItemMeta()) {
-            return false;
+        ItemMeta meta = item.getItemMeta();
+        if (meta != null) {
+            String displayName = meta.getDisplayName();
+            String[] unplaceableNames = {
+                    "APHE Missile", "Teleportation Core", "Ice Core", "Dense Obsidian", "Condensed Ice",
+                    "Stable Pearl", "Consolidated Ice", "Activated Obsidian", "Ender Eye", "Heavy Pearl",
+                    "Flattened Pearl", "Unstable Pearl", "Compressed Ice", "Ice Accelerator", "Linear Accelerator",
+                    "Concentrated Explosives", "APHE", "Launcher Tube", "Missile Launcher", "Power Core",
+                    "Explosive Core", "Protection Core", "Magical Container", "Lapis Crystal", "Redstone Crystal",
+                    "Jade", "Moonstone", "Onyx", "Rhodonite", "Amethyst", "Tanzanite", "Sapphire", "Kyanite",
+                    "Turquoise", "Emerald", "Peridot", "Topaz", "Citrine", "Garnet", "Jade Cluster",
+                    "Moonstone Cluster", "Onyx Cluster", "Rhodonite Cluster", "Amethyst Cluster", "Tanzanite Cluster",
+                    "Sapphire Cluster", "Kyanite Cluster", "Turquoise Cluster", "Emerald Cluster", "Peridot Cluster",
+                    "Topaz Cluster", "Citrine Cluster", "Garnet Cluster", "Jade Crystal", "Moonstone Crystal",
+                    "Onyx Crystal", "Rhodonite Crystal", "Amethyst Crystal", "Tanzanite Crystal", "Sapphire Crystal",
+                    "Kyanite Crystal", "Turquoise Crystal", "Emerald Crystal", "Peridot Crystal", "Topaz Crystal",
+                    "Citrine Crystal", "Garnet Crystal"
+            };
+            for (String name : unplaceableNames) {
+                if (displayName.contains(name)) return true;
+            }
         }
-
-        String displayName = Objects.requireNonNull(item.getItemMeta()).getDisplayName();
-
-        // Check if the item display name matches any of the unplaceable items
-        return  displayName.contains("APHE Missile") ||
-                displayName.contains("Teleportation Core") ||
-                displayName.contains("Ice Core") ||
-                displayName.contains("Dense Obsidian") ||
-                displayName.contains("Condensed Ice") ||
-                displayName.contains("Stable Pearl") ||
-                displayName.contains("Consolidated Ice") ||
-                displayName.contains("Activated Obsidian") ||
-                displayName.contains("Ender Eye") ||
-                displayName.contains("Heavy Pearl") ||
-                displayName.contains("Flattened Pearl") ||
-                displayName.contains("Unstable Pearl") ||
-                displayName.contains("Compressed Ice") ||
-                displayName.contains("Ice Accelerator") ||
-                displayName.contains("Linear Accelerator") ||
-                displayName.contains("Concentrated Explosives") ||
-                displayName.contains("APHE") ||
-                displayName.contains("Power Core") ||
-                displayName.contains("Explosive Core") ||
-                displayName.contains("Protection Core") ||
-                displayName.contains("Magical Container") ||
-                displayName.contains("Lapis Crystal") ||
-                displayName.contains("Redstone Crystal") ||
-                displayName.contains("Jade") ||
-                displayName.contains("Moonstone") ||
-                displayName.contains("Onyx") ||
-                displayName.contains("Rhodonite") ||
-                displayName.contains("Amethyst") ||
-                displayName.contains("Tanzanite") ||
-                displayName.contains("Sapphire") ||
-                displayName.contains("Kyanite") ||
-                displayName.contains("Turquoise") ||
-                displayName.contains("Emerald") ||
-                displayName.contains("Peridot") ||
-                displayName.contains("Topaz") ||
-                displayName.contains("Citrine") ||
-                displayName.contains("Garnet")||
-                displayName.contains("Jade Cluster") ||
-                displayName.contains("Moonstone Cluster") ||
-                displayName.contains("Onyx Cluster") ||
-                displayName.contains("Rhodonite Cluster") ||
-                displayName.contains("Amethyst Cluster") ||
-                displayName.contains("Tanzanite Cluster") ||
-                displayName.contains("Sapphire Cluster") ||
-                displayName.contains("Kyanite Cluster") ||
-                displayName.contains("Turquoise Cluster") ||
-                displayName.contains("Emerald Cluster") ||
-                displayName.contains("Peridot Cluster") ||
-                displayName.contains("Topaz Cluster") ||
-                displayName.contains("Citrine Cluster") ||
-                displayName.contains("Garnet Cluster")||
-                displayName.contains("Jade Crystal") ||
-                displayName.contains("Moonstone Crystal") ||
-                displayName.contains("Onyx Crystal") ||
-                displayName.contains("Rhodonite Crystal") ||
-                displayName.contains("Amethyst Crystal") ||
-                displayName.contains("Tanzanite Crystal") ||
-                displayName.contains("Sapphire Crystal") ||
-                displayName.contains("Kyanite Crystal") ||
-                displayName.contains("Turquoise Crystal") ||
-                displayName.contains("Emerald Crystal") ||
-                displayName.contains("Peridot Crystal") ||
-                displayName.contains("Topaz Crystal") ||
-                displayName.contains("Citrine Crystal") ||
-                displayName.contains("Garnet Crystal");
+        return false;
     }
 }
