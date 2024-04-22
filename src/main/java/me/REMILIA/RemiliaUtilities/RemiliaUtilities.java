@@ -1155,35 +1155,32 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
-        SlimefunItemStack CrystalBlaster = new SlimefunItemStack(
-                "CRYSTAL_BLASTER", // Item ID
+        SlimefunItemStack CrystalSniper = new SlimefunItemStack(
+                "CRYSTAL_SNIPER", // Item ID
                 Material.DIAMOND_HOE, // Material
-                "&bCrystal Blaster", // Display name
+                "&bCrystal Sniper", // Display name
                 "", // Empty lore
-                "&e&lRight Click to Shoot", // Description
-                "&eHarness the power of crystals", // Additional lore
-                "&cMid-range" // Additional lore
+                "&e&lLeft Click to Shoot", // Description
+                "&e&lRight Click to Zoom", // Additional lore
+                "&dHarness the power of crystals", // Additional lore
+                "&eVery long range", // Additional lore
+                "&e6s cooldown" // Additional lore
         );
-        ItemMeta CBMeta = CrystalBlaster.getItemMeta();
-        if (CBMeta != null) {
-            List<String> CBlore = new ArrayList<>(CBMeta.getLore());
-            CBlore.add("");
-            CBlore.add("This ain't Pixel Gun!");
-            CBMeta.setLore(CBlore);
-            CrystalBlaster.setItemMeta(CBMeta);
+        ItemMeta CSMeta = CrystalSniper.getItemMeta();
+        if (CSMeta != null) {
+            List<String> CSlore = new ArrayList<>(CSMeta.getLore());
+            CSlore.add("");
+            CSlore.add("This ain't Pixel Gun!");
+            CSMeta.setLore(CSlore);
+            CrystalSniper.setItemMeta(CSMeta);
         }
-        ItemStack[] crystalBlasterRecipe = {
+        ItemStack[] crystalSniperRecipe = {
                 new ItemStack(Material.PISTON), LinearAccelerator, LinearAccelerator,
                 MagicalContainer, ReinforcedHandle, new ItemStack(Material.SPYGLASS),
                 ReinforcedHandle, ReinforcedHandle, new ItemStack(Material.ARMOR_STAND)
         };
-        SlimefunItem crystalBlasterItem = new SlimefunItem(
-                RU_TOOLS, // Category
-                CrystalBlaster, // Item
-                RecipeType.ARMOR_FORGE, // Recipe type
-                crystalBlasterRecipe // Recipe
-        );
-        crystalBlasterItem.register(this);
+        SlimefunItem crystalSniperItem = new SlimefunItem(RU_TOOLS, CrystalSniper, RecipeType.ARMOR_FORGE, crystalSniperRecipe);
+        crystalSniperItem.register(this);
 
         //----------PANELS BELOW----------//
 
@@ -1259,8 +1256,8 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         // Register the UnplaceableItemPlacementListener as a listener
         getServer().getPluginManager().registerEvents(new UnplaceableItemPlacementListener(), this);
 
-        // Registering the CrystalBlasterListener as a listener
-        getServer().getPluginManager().registerEvents(new CrystalBlasterListener(this), this);
+        // Registering the CrystalSniperListener as a listener
+        getServer().getPluginManager().registerEvents(new CrystalSniperListener(this), this);
 
 
     }

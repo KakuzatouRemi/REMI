@@ -47,8 +47,8 @@ public class BlockDropFeature implements Listener {
 
         // Check if the broken block is stone or deepslate
         if (block.getType() == Material.STONE || block.getType() == Material.DEEPSLATE) {
-            // Generate a random number between 0 and 3
-            int randomNumber1 = random.nextInt(8); {
+            // Generate a random number between 0 and 11
+            int randomNumber1 = random.nextInt(12); {
                 if (randomNumber1 == 0) {
 
                     // Generate a random number between 0 and 13

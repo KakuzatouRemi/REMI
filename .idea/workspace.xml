@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/CrystalSniperListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/BlockDropFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/BlockDropFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.20-Alpha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RemiliaUtilities v0.20-Alpha.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,37 +73,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Maven.RemiliaUtilities [clean,package].executor": "Run",
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/IntJI Projects/REMI/src/main/java/me/REMILIA/RemiliaUtilities",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.RemiliaUtilities [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Remilia/AppData/Roaming/JetBrains/IdeaIC2024.1/scratches&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/Change Language": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/Change Language&quot;: [
+      &quot;TEXT&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="me.REMILIA.RemiliaUtilities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Remilia\AppData\Roaming\JetBrains\IdeaIC2024.1\scratches" />
       <recent name="E:\IntJI Projects\REMI\src\main\java\me\REMILIA\RemiliaUtilities" />
       <recent name="E:\IntJI Projects\EcoPower" />
     </key>

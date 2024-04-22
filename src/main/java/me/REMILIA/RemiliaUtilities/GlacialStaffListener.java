@@ -49,7 +49,7 @@ public class GlacialStaffListener implements Listener {
 
                     @Override
                     public void run() {
-                        if (ticks >= 100 || hitEntity) { // 5 seconds at 20 ticks per second
+                        if (ticks >= 160 || hitEntity) { // 8 seconds at 20 ticks per second
                             cancel();
                             return;
                         }
