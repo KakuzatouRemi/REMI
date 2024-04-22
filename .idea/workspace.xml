@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/CrystalSniperListener.java" afterDir="false" />
+    <list default="true" id="5d0a4c6c-fff1-4067-9119-55ee96a684dc" name="Changes" comment="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/MissileLauncherListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/BlockDropFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/BlockDropFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/GlacialStaffListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RemiliaUtilities v0.20-Alpha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RemiliaUtilities v0.20-Alpha.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/CrystalBlasterListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/GlacialStaffListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/REMILIA/RemiliaUtilities/RemiliaUtilities.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713716959521</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper">
+      <option name="closed" value="true" />
+      <created>1713798228611</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713798228611</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,7 +324,8 @@
     <MESSAGE value="Added Block Drops, Gems can now be obtained.&#10;Added a separate category for gems" />
     <MESSAGE value="Added APHE Missile, made materials/items/tools unplaceable, as they should be" />
     <MESSAGE value="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Glacial Staff lore&#10;Added Gem Clusters &amp; Crystals&#10;Added Crystal Blaster" />
+    <MESSAGE value="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nerfed gem drop rate from 12.5% to 8.33%&#10;Extended Glacial Staff projectile lifetime (longer range)&#10;Reworked Crystal Blaster to Crystal Sniper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,24 +341,9 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java</url>
-          <line>446</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java</url>
-          <line>590</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java</url>
-          <line>990</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/RemiliaUtilities.java</url>
-          <line>734</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/src/main/java/me/REMILIA/RemiliaUtilities/MissileLauncherListener.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

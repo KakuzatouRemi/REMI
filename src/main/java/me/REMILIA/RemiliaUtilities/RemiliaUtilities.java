@@ -293,6 +293,21 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
         SlimefunItem LinearAcceleratorItem = new SlimefunItem(RU_MATERIALS, LinearAccelerator, RecipeType.ENHANCED_CRAFTING_TABLE, LinearAcceleratorRecipe);
         LinearAcceleratorItem.register(this);
 
+        //HEHE//
+
+        SlimefunItemStack LauncherTube = new SlimefunItemStack("LAUNCHER_TUBE", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJjZmQyMmZiMWFhN2JkN2VmNGY4NmRhMGM4OTIxZTc2MGY4NDg4ODcwZGRkYmM0MGY2Mjc3NTBjMTE4ZTE3NiJ9fX0=", "&3Launcher Tube", "&7You put the missile here");
+        ItemStack[] LauncherTubeRecipe = {
+                new ItemStack(SlimefunItems.REINFORCED_PLATE), new ItemStack(SlimefunItems.REINFORCED_PLATE), new ItemStack(SlimefunItems.REINFORCED_PLATE),
+                null, null, null,
+                new ItemStack(SlimefunItems.REINFORCED_PLATE), new ItemStack(SlimefunItems.REINFORCED_PLATE), new ItemStack(SlimefunItems.REINFORCED_PLATE)
+        };
+        SlimefunItem LauncherTubeItem = new SlimefunItem(
+                RU_MATERIALS, // Category
+                LauncherTube, // Item
+                RecipeType.ENHANCED_CRAFTING_TABLE, // Recipe type
+                LauncherTubeRecipe // Recipe
+        );
+        LauncherTubeItem.register(this);
 
         //HEHE//
 
@@ -1155,6 +1170,31 @@ public class RemiliaUtilities extends JavaPlugin implements SlimefunAddon {
 
         //HEHE//
 
+        SlimefunItemStack MissileLauncher = new SlimefunItemStack(
+                "MISSILE_LAUNCHER", // Item ID
+                "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFiNmVlNWJiZTVhZDQyOTY4MGMxYzE1Y2Y0MjBmOTgxMWUxMTRiNzY4NTRmODk5ZjBlZjA4ZmRlMzMyNzk4YyJ9fX0=", // Material
+                "&eMissile Launcher", // Display name
+                "", "&e&lRight Click to Fire", "&eUses APHE Missiles", "&cUse responsibly", "Faster ROF than manual" // Description/lore
+        );
+        ItemMeta MLMeta = MissileLauncher.getItemMeta();
+        // Add MLlore
+        List<String> MLLore = new ArrayList<>(MLMeta.getLore());
+        MLLore.add("");
+        MLLore.add("FREEEEBIRD!!!");
+        if (MLMeta != null) {
+            MLMeta.setLore(MLLore);
+            MissileLauncher.setItemMeta(MLMeta);
+        }
+        ItemStack[] MissileLauncherRecipe = {
+                LinearAccelerator, null, null,
+                LauncherTube, LauncherTube, LauncherTube,
+                null, null, ReinforcedHandle
+        }; // Recipe ingredients, change as needed
+        SlimefunItem MissileLauncherItem = new SlimefunItem(RU_TOOLS, MissileLauncher, RecipeType.NULL, MissileLauncherRecipe);
+        MissileLauncherItem.register(this);
+
+        //HEHE//
+
         SlimefunItemStack CrystalSniper = new SlimefunItemStack(
                 "CRYSTAL_SNIPER", // Item ID
                 Material.DIAMOND_HOE, // Material
@@ -1331,9 +1371,9 @@ List<String> MLLore = new ArrayList<>(MLMeta.getLore());
             MissileLauncher.setItemMeta(MLMeta);
         }
 ItemStack[] MissileLauncherRecipe = {
-        null, null, null,
-        null, null, null,
-        null, null, null
+        LinearAccelerator, null, null,
+        LauncherTube, LauncherTube, LauncherTube,
+        null, null, ReinforcedHandle
 }; // Recipe ingredients, change as needed
 SlimefunItem MissileLauncherItem = new SlimefunItem(RU_TOOLS, MissileLauncher, RecipeType.NULL, MissileLauncherRecipe);
         MissileLauncherItem.register(this);

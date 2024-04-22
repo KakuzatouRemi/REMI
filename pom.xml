@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.REMILIA</groupId>
     <artifactId>RemiliaUtilities</artifactId>
-    <version>0.20-Alpha</version>
+    <version>0.21-Alpha</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
