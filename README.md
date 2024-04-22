@@ -38,7 +38,11 @@ Intended for my server, and to those who want to try it
   + Very long range
   + Doesn't break blocks (except it destroys item frames and armor stands)
   + 10s Cooldown
-+ Crystal Blaster
++ Missile Launcher
+  + Uses APHE Missiles
+  + Very long range
+  + 3s Cooldown (Faster ROF)
++ Crystal Sniper
   + Very long range
   + 4x projectile speed
   + Consumes crystals
